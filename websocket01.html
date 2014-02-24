@@ -129,7 +129,7 @@
           wsURL: document.getElementById('wsURL').value
         });
 
-        if (wsURL) {
+        if (client.config.wsURL) {
             client.config.transport = 'websocket';
         }
 
