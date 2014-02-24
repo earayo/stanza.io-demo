@@ -126,9 +126,12 @@
         client = XMPP.createClient({
           jid: jid,
           password: document.getElementById('password').value,
-          transport: 'websocket',
           wsURL: document.getElementById('wsURL').value
         });
+
+        if (wsURL) {
+            client.config.transport = 'websocket';
+        }
 
         client.on('*', log);
 
