@@ -69,17 +69,17 @@
         margin-right: 20px;
       }
     </style>
-    <script src="stanzaio.bundle.js"></script>
+    <script src="build/stanzaio.bundle.js"></script>
   </head>
   <body>
     <h1 id="logTitle">Events &amp; Data</h1>
     <div id="log"></div>
     <div id="settings">
-      <h1>Connection Settings (<a href="websocket01.html">Try draft-xmpp-websocket-01 version</a>)</h1>
+      <h1>Connection Settings</h1>
       <form id="loginInfo">
-        <label>JID: <input id="jid" type="text" name="jid" value="stanzaiodemo@example.com"/></label>
+        <label>JID: <input id="jid" type="text" name="jid" value="demo@yourdomain.example"/></label>
         <label>Password: <input id="password" type="password" name="password" /></label>
-        <label>WebSocket URL: <input id="wsURL" type="text" name="wsURL" value="" /></label>
+        <label>WebSocket/BOSH URL: <input id="url" type="text" name="url" value="" /></label>
         <input id="connect" type="submit" value="Connect" />
       </form>
     </div>
@@ -95,19 +95,21 @@
           header.textContent = name;
           logEntry.appendChild(header);
 
+          var code = document.createElement('code');
+          var codeData = document.createElement('pre');
 
-          if (data && data.toJSON) {
-            var codeJSON = document.createElement('code');
-            codeJSON.textContent = JSON.stringify(data.toJSON());
-
-            altEntry.appendChild(codeJSON);
-            logEntry.appendChild(altEntry);
-            logEntry.appendChild(document.createElement('hr'));
+          if (typeof data === 'string') {
+              codeData.textContent = data;
+          } else {
+              if (name === 'connected' || name === 'disconnected') {
+                  codeData.textContent = 'Client instance: ' + JSON.stringify(data.config, null, '  ');
+              } else {
+                  codeData.textContent = JSON.stringify(data, null, '  ');
+              }
           }
 
-          var codeData = document.createElement('code');
-          codeData.textContent = data;
-          entry.appendChild(codeData);
+          code.appendChild(codeData);
+          entry.appendChild(code);
           logEntry.appendChild(entry);
 
           container.appendChild(logEntry);
@@ -123,22 +125,34 @@
 
         var jid = document.getElementById('jid').value;
 
+        var url = document.getElementById('url').value;
+        var wsURL, boshURL, transports = ['websocket', 'bosh'];
+
+        if (url.indexOf('http') === 0) {
+            boshURL = url;
+            transports = ['bosh'];
+        } else if (url.indexOf('ws') === 0) {
+            wsURL = url;
+            transports = ['websocket'];
+        }
+
         client = XMPP.createClient({
           jid: jid,
           password: document.getElementById('password').value,
-          wsURL: document.getElementById('wsURL').value
+          wsURL: wsURL,
+          boshURL: boshURL,
+          transports: transports
         });
-
-        if (client.config.wsURL) {
-            client.config.transport = 'websocket';
-        }
 
         client.on('*', log);
 
         client.on('session:started', function () {
           client.enableCarbons();
           client.getRoster(function (err, resp) {
-            client.sendPresence();
+            client.updateCaps();
+            client.sendPresence({
+                caps: client.disco.caps
+            });
           });
         });
 
