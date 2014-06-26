@@ -28,7 +28,7 @@ exports.createClient = function (opts) {
 };
 
 }).call(this,_dereq_("FWaASH"))
-},{"./lib/client":2,"./lib/jid":3,"./lib/plugins":21,"./lib/stanza/bosh":51,"./lib/stanza/iq":66,"./lib/stanza/message":71,"./lib/stanza/presence":77,"./lib/stanza/pubsub":80,"./lib/stanza/pubsubEvents":82,"./lib/stanza/stream":94,"FWaASH":156,"crypto":150,"jxt":187}],2:[function(_dereq_,module,exports){
+},{"./lib/client":2,"./lib/jid":3,"./lib/plugins":21,"./lib/stanza/bosh":51,"./lib/stanza/iq":66,"./lib/stanza/message":71,"./lib/stanza/presence":77,"./lib/stanza/pubsub":80,"./lib/stanza/pubsubEvents":82,"./lib/stanza/stream":94,"FWaASH":156,"crypto":150,"jxt":195}],2:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -682,7 +682,7 @@ Client.prototype.JID = function (jid) {
 
 module.exports = Client;
 
-},{"./jid":3,"./sm":45,"./stanza/bind":47,"./stanza/error":58,"./stanza/iq":66,"./stanza/message":71,"./stanza/presence":77,"./stanza/sasl":90,"./stanza/session":91,"./stanza/sm":93,"./stanza/stream":94,"./stanza/streamError":95,"./stanza/streamFeatures":96,"./transports/bosh":102,"./transports/old-websocket":103,"./transports/websocket":104,"async":105,"atob":106,"bluebird":109,"btoa":159,"hostmeta":165,"node-uuid":195,"sasl-anonymous":197,"sasl-digest-md5":199,"sasl-external":201,"sasl-plain":203,"sasl-scram-sha-1":205,"saslmechanisms":207,"underscore":208,"util":158,"wildemitter":210}],3:[function(_dereq_,module,exports){
+},{"./jid":3,"./sm":45,"./stanza/bind":47,"./stanza/error":58,"./stanza/iq":66,"./stanza/message":71,"./stanza/presence":77,"./stanza/sasl":90,"./stanza/session":91,"./stanza/sm":93,"./stanza/stream":94,"./stanza/streamError":95,"./stanza/streamFeatures":96,"./transports/bosh":102,"./transports/old-websocket":103,"./transports/websocket":104,"async":105,"atob":106,"bluebird":109,"btoa":159,"hostmeta":160,"node-uuid":200,"sasl-anonymous":202,"sasl-digest-md5":204,"sasl-external":206,"sasl-plain":208,"sasl-scram-sha-1":210,"saslmechanisms":217,"underscore":218,"util":158,"wildemitter":220}],3:[function(_dereq_,module,exports){
 'use strict';
 
 function JID(jid) {
@@ -967,7 +967,7 @@ module.exports = function (client) {
     };
 };
 
-},{"../jid":3,"../stanza/bookmarks":50,"underscore":208}],9:[function(_dereq_,module,exports){
+},{"../jid":3,"../stanza/bookmarks":50,"underscore":218}],9:[function(_dereq_,module,exports){
 'use strict';
 
 _dereq_('../stanza/carbons');
@@ -1391,7 +1391,7 @@ module.exports = function (client) {
 };
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../stanza/caps":52,"../stanza/disco":57,"buffer":146,"iana-hashes":167,"underscore":208,"utf8":209}],16:[function(_dereq_,module,exports){
+},{"../stanza/caps":52,"../stanza/disco":57,"buffer":146,"iana-hashes":162,"underscore":218,"utf8":219}],16:[function(_dereq_,module,exports){
 'use strict';
 
 _dereq_('../stanza/extdisco');
@@ -1479,7 +1479,7 @@ module.exports = function (client) {
     });
 };
 
-},{"iana-hashes":167}],20:[function(_dereq_,module,exports){
+},{"iana-hashes":162}],20:[function(_dereq_,module,exports){
 'use strict';
 
 module.exports = function (client) {
@@ -1665,7 +1665,7 @@ module.exports = function (client) {
     };
 };
 
-},{"../stanza/file":60,"../stanza/iceUdp":65,"../stanza/jingle":67,"../stanza/rtp":88,"jingle":168}],24:[function(_dereq_,module,exports){
+},{"../stanza/file":60,"../stanza/iceUdp":65,"../stanza/jingle":67,"../stanza/rtp":88,"jingle":176}],24:[function(_dereq_,module,exports){
 'use strict';
 
 _dereq_('../stanza/json');
@@ -2108,7 +2108,7 @@ module.exports = function (client) {
     };
 };
 
-},{"../jid":3,"../stanza/muc":73,"underscore":208}],30:[function(_dereq_,module,exports){
+},{"../jid":3,"../stanza/muc":73,"underscore":218}],30:[function(_dereq_,module,exports){
 'use strict';
 
 _dereq_('../stanza/nick');
@@ -2802,7 +2802,7 @@ stanza.add(EventItem, 'avatars', avatars);
 stanza.add(Item, 'avatarData', stanza.subText('urn:xmpp:avatar:data', 'data'));
 stanza.add(EventItem, 'avatarData', stanza.subText('urn:xmpp:avatar:data', 'data'));
 
-},{"./pubsub":80,"./pubsubEvents":82,"jxt":187,"underscore":208}],47:[function(_dereq_,module,exports){
+},{"./pubsub":80,"./pubsubEvents":82,"jxt":195,"underscore":218}],47:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 var StreamFeatures = _dereq_('./streamFeatures');
@@ -2823,7 +2823,7 @@ var Bind = module.exports = stanza.define({
 stanza.extend(Iq, Bind);
 stanza.extend(StreamFeatures, Bind);
 
-},{"./iq":66,"./streamFeatures":96,"./util":98,"jxt":187}],48:[function(_dereq_,module,exports){
+},{"./iq":66,"./streamFeatures":96,"./util":98,"jxt":195}],48:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -2889,7 +2889,7 @@ stanza.extend(Iq, exports.Block);
 stanza.extend(Iq, exports.Unblock);
 stanza.extend(Iq, exports.BlockList);
 
-},{"../jid":3,"./iq":66,"jxt":187}],49:[function(_dereq_,module,exports){
+},{"../jid":3,"./iq":66,"jxt":195}],49:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 
 var Iq = _dereq_('./iq');
@@ -2916,7 +2916,7 @@ stanza.extend(Iq, BOB);
 stanza.extend(Message, BOB);
 stanza.extend(Presence, BOB);
 
-},{"./iq":66,"./message":71,"./presence":77,"jxt":187}],50:[function(_dereq_,module,exports){
+},{"./iq":66,"./message":71,"./presence":77,"jxt":195}],50:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var util = _dereq_('./util');
 var PrivateStorage = _dereq_('./private');
@@ -2944,7 +2944,7 @@ var Bookmarks = module.exports = stanza.define({
 stanza.extend(PrivateStorage, Bookmarks);
 stanza.extend(Bookmarks, Conference, 'conferences');
 
-},{"./private":78,"./util":98,"jxt":187}],51:[function(_dereq_,module,exports){
+},{"./private":78,"./util":98,"jxt":195}],51:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3014,7 +3014,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"./util":98,"jxt":187}],52:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],52:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Presence = _dereq_('./presence');
 var StreamFeatures = _dereq_('./streamFeatures');
@@ -3035,7 +3035,7 @@ var Caps = module.exports = stanza.define({
 stanza.extend(Presence, Caps);
 stanza.extend(StreamFeatures, Caps);
 
-},{"./presence":77,"./streamFeatures":96,"jxt":187}],53:[function(_dereq_,module,exports){
+},{"./presence":77,"./streamFeatures":96,"jxt":195}],53:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Message = _dereq_('./message');
 var Iq = _dereq_('./iq');
@@ -3084,7 +3084,7 @@ stanza.extend(Message, exports.Private);
 stanza.extend(Iq, exports.Enable);
 stanza.extend(Iq, exports.Disable);
 
-},{"./forwarded":61,"./iq":66,"./message":71,"jxt":187}],54:[function(_dereq_,module,exports){
+},{"./forwarded":61,"./iq":66,"./message":71,"jxt":195}],54:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3148,7 +3148,7 @@ stanza.add(ErrorStanza, 'adhocCommandCondition', util.enumSub(NS, CONDITIONS));
 stanza.extend(Iq, Command);
 stanza.extend(Command, DataForm);
 
-},{"./dataforms":55,"./error":58,"./iq":66,"./util":98,"jxt":187}],55:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./error":58,"./iq":66,"./util":98,"jxt":195}],55:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3345,7 +3345,7 @@ stanza.extend(exports.Media, exports.MediaURI, 'uris');
 stanza.extend(exports.Validation, exports.Range);
 stanza.extend(exports.Validation, exports.ListRange);
 
-},{"../jid":3,"./message":71,"./util":98,"jxt":187}],56:[function(_dereq_,module,exports){
+},{"../jid":3,"./message":71,"./util":98,"jxt":195}],56:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Message = _dereq_('./message');
 var Presence = _dereq_('./presence');
@@ -3365,7 +3365,7 @@ var DelayedDelivery = module.exports = stanza.define({
 stanza.extend(Message, DelayedDelivery);
 stanza.extend(Presence, DelayedDelivery);
 
-},{"./message":71,"./presence":77,"./util":98,"jxt":187}],57:[function(_dereq_,module,exports){
+},{"./message":71,"./presence":77,"./util":98,"jxt":195}],57:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3432,7 +3432,7 @@ stanza.extend(exports.DiscoItems, DiscoItem, 'items');
 stanza.extend(exports.DiscoInfo, DiscoIdentity, 'identities');
 stanza.extend(exports.DiscoInfo, DataForm, 'extensions');
 
-},{"./dataforms":55,"./iq":66,"./rsm":87,"./util":98,"jxt":187}],58:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./iq":66,"./rsm":87,"./util":98,"jxt":195}],58:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3510,7 +3510,7 @@ stanza.extend(Message, ErrorStanza);
 stanza.extend(Presence, ErrorStanza);
 stanza.extend(Iq, ErrorStanza);
 
-},{"./iq":66,"./message":71,"./presence":77,"./util":98,"jxt":187}],59:[function(_dereq_,module,exports){
+},{"./iq":66,"./message":71,"./presence":77,"./util":98,"jxt":195}],59:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 var DataForm = _dereq_('./dataforms').DataForm;
@@ -3555,7 +3555,7 @@ stanza.extend(Service, DataForm);
 stanza.extend(Iq, Services);
 stanza.extend(Iq, Credentials);
 
-},{"./dataforms":55,"./iq":66,"jxt":187}],60:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./iq":66,"jxt":195}],60:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3618,7 +3618,7 @@ stanza.extend(exports.File, exports.Range);
 stanza.extend(exports.File, exports.Thumbnail);
 stanza.extend(jingle.Content, exports.FileTransfer);
 
-},{"./hash":64,"./jingle":67,"./util":98,"jxt":187}],61:[function(_dereq_,module,exports){
+},{"./hash":64,"./jingle":67,"./util":98,"jxt":195}],61:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Message = _dereq_('./message');
 var Presence = _dereq_('./presence');
@@ -3640,7 +3640,7 @@ stanza.extend(Forwarded, Presence);
 stanza.extend(Forwarded, Iq);
 stanza.extend(Forwarded, DelayedDelivery);
 
-},{"./delayed":56,"./iq":66,"./message":71,"./presence":77,"jxt":187}],62:[function(_dereq_,module,exports){
+},{"./delayed":56,"./iq":66,"./message":71,"./presence":77,"jxt":195}],62:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3673,7 +3673,7 @@ exports.Close = stanza.define({
     }
 });
 
-},{"./util":98,"jxt":187}],63:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],63:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3718,7 +3718,7 @@ var GeoLoc = module.exports = stanza.define({
 stanza.extend(Item, GeoLoc);
 stanza.extend(EventItem, GeoLoc);
 
-},{"./pubsub":80,"./pubsubEvents":82,"./util":98,"jxt":187}],64:[function(_dereq_,module,exports){
+},{"./pubsub":80,"./pubsubEvents":82,"./util":98,"jxt":195}],64:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 
 module.exports = stanza.define({
@@ -3731,7 +3731,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"jxt":187}],65:[function(_dereq_,module,exports){
+},{"jxt":195}],65:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var jingle = _dereq_('./jingle');
 
@@ -3813,7 +3813,7 @@ stanza.extend(exports.ICEUDP, exports.RemoteCandidate);
 stanza.extend(exports.ICEUDP, exports.Fingerprint, 'fingerprints');
 stanza.extend(exports.ICEUDP, exports.SctpMap, 'sctp');
 
-},{"./jingle":67,"jxt":187}],66:[function(_dereq_,module,exports){
+},{"./jingle":67,"jxt":195}],66:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3859,7 +3859,7 @@ Iq.prototype.errorReply = function (data) {
     return new Iq(data);
 };
 
-},{"./util":98,"jxt":187}],67:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],67:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3959,7 +3959,7 @@ stanza.extend(Iq, exports.Jingle);
 stanza.extend(exports.Jingle, exports.Content, 'contents');
 stanza.extend(exports.Jingle, exports.Reason);
 
-},{"./error":58,"./iq":66,"./util":98,"jxt":187}],68:[function(_dereq_,module,exports){
+},{"./error":58,"./iq":66,"./util":98,"jxt":195}],68:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -3988,7 +3988,7 @@ stanza.add(Message, 'json', JSONExtension);
 stanza.add(Item, 'json', JSONExtension);
 stanza.add(EventItem, 'json', JSONExtension);
 
-},{"./message":71,"./pubsub":80,"./pubsubEvents":82,"jxt":187}],69:[function(_dereq_,module,exports){
+},{"./message":71,"./pubsub":80,"./pubsubEvents":82,"jxt":195}],69:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4030,7 +4030,7 @@ exports.Tag = stanza.define({
 stanza.extend(exports.Log, exports.Tag, 'tags');
 stanza.extend(Message, exports.Log);
 
-},{"./message":71,"jxt":187}],70:[function(_dereq_,module,exports){
+},{"./message":71,"jxt":195}],70:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4133,7 +4133,7 @@ stanza.extend(Message, exports.Result);
 stanza.extend(exports.Result, Forwarded);
 stanza.extend(exports.MAMQuery, RSM);
 
-},{"../jid":3,"./forwarded":61,"./iq":66,"./message":71,"./rsm":87,"./util":98,"jxt":187}],71:[function(_dereq_,module,exports){
+},{"../jid":3,"./forwarded":61,"./iq":66,"./message":71,"./rsm":87,"./util":98,"jxt":195}],71:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4178,7 +4178,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"./util":98,"jxt":187}],72:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],72:[function(_dereq_,module,exports){
 'use strict';
 var stanza = _dereq_('jxt');
 var util = _dereq_('./util');
@@ -4291,7 +4291,7 @@ stanza.extend(Item, Mood);
 stanza.extend(EventItem, Mood);
 stanza.extend(Message, Mood);
 
-},{"./message":71,"./pubsub":80,"./pubsubEvents":82,"./util":98,"jxt":187}],73:[function(_dereq_,module,exports){
+},{"./message":71,"./pubsub":80,"./pubsubEvents":82,"./util":98,"jxt":195}],73:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4558,7 +4558,7 @@ stanza.extend(Message, exports.DirectInvite);
 stanza.extend(Iq, exports.MUCAdmin);
 stanza.extend(Iq, exports.MUCOwner);
 
-},{"./dataforms":55,"./iq":66,"./message":71,"./presence":77,"./util":98,"jxt":187}],74:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./iq":66,"./message":71,"./presence":77,"./util":98,"jxt":195}],74:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4576,7 +4576,7 @@ stanza.add(EventItem, 'nick', nick);
 stanza.add(Presence, 'nick', nick);
 stanza.add(Message, 'nick', nick);
 
-},{"./message":71,"./presence":77,"./pubsub":80,"./pubsubEvents":82,"jxt":187}],75:[function(_dereq_,module,exports){
+},{"./message":71,"./presence":77,"./pubsub":80,"./pubsubEvents":82,"jxt":195}],75:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4595,7 +4595,7 @@ var OOB = module.exports = stanza.define({
 
 stanza.extend(Message, OOB, 'oobURIs');
 
-},{"./message":71,"jxt":187}],76:[function(_dereq_,module,exports){
+},{"./message":71,"jxt":195}],76:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 
@@ -4611,7 +4611,7 @@ var Ping = module.exports = stanza.define({
 
 stanza.extend(Iq, Ping);
 
-},{"./iq":66,"jxt":187}],77:[function(_dereq_,module,exports){
+},{"./iq":66,"jxt":195}],77:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4684,7 +4684,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"./util":98,"jxt":187}],78:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],78:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 
@@ -4697,7 +4697,7 @@ var PrivateStorage = module.exports = stanza.define({
 
 stanza.extend(Iq, PrivateStorage);
 
-},{"./iq":66,"jxt":187}],79:[function(_dereq_,module,exports){
+},{"./iq":66,"jxt":195}],79:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4724,7 +4724,7 @@ var PSA = module.exports = stanza.define({
 
 stanza.extend(Presence, PSA);
 
-},{"./presence":77,"./util":98,"jxt":187}],80:[function(_dereq_,module,exports){
+},{"./presence":77,"./util":98,"jxt":195}],80:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4868,7 +4868,7 @@ stanza.extend(exports.SubscriptionOptions, DataForm);
 
 stanza.extend(Iq, exports.Pubsub);
 
-},{"./dataforms":55,"./iq":66,"./rsm":87,"./util":98,"jxt":187}],81:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./iq":66,"./rsm":87,"./util":98,"jxt":195}],81:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -4905,7 +4905,7 @@ var CONDITIONS = [
 
 stanza.add(ErrorStanza, 'pubsubCondition', util.enumSub(ERRNS, CONDITIONS));
 
-},{"./error":58,"./util":98,"jxt":187}],82:[function(_dereq_,module,exports){
+},{"./error":58,"./util":98,"jxt":195}],82:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5036,7 +5036,7 @@ stanza.extend(exports.Event, exports.EventPurge);
 
 stanza.extend(Message, exports.Event);
 
-},{"./dataforms":55,"./message":71,"./util":98,"jxt":187}],83:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./message":71,"./util":98,"jxt":195}],83:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5086,7 +5086,7 @@ stanza.extend(exports.PubsubOwner, exports.Configure);
 
 stanza.extend(Iq, exports.PubsubOwner);
 
-},{"./dataforms":55,"./iq":66,"jxt":187}],84:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./iq":66,"jxt":195}],84:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -5150,7 +5150,7 @@ stanza.add(Item, 'reach', reachability);
 stanza.add(EventItem, 'reach', reachability);
 stanza.add(Presence, 'reach', reachability);
 
-},{"./presence":77,"./pubsub":80,"./pubsubEvents":82,"jxt":187,"underscore":208}],85:[function(_dereq_,module,exports){
+},{"./presence":77,"./pubsub":80,"./pubsubEvents":82,"jxt":195,"underscore":218}],85:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 
 var Iq = _dereq_('./iq');
@@ -5193,7 +5193,7 @@ stanza.extend(Iq, Register);
 stanza.extend(Register, DataForm);
 stanza.extend(Register, OOB);
 
-},{"./dataforms":55,"./iq":66,"./oob":75,"jxt":187}],86:[function(_dereq_,module,exports){
+},{"./dataforms":55,"./iq":66,"./oob":75,"jxt":195}],86:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5243,7 +5243,7 @@ var RosterItem = stanza.define({
 stanza.extend(Iq, Roster);
 stanza.extend(Roster, RosterItem, 'items');
 
-},{"./iq":66,"./util":98,"jxt":187}],87:[function(_dereq_,module,exports){
+},{"./iq":66,"./util":98,"jxt":195}],87:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5279,7 +5279,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"jxt":187}],88:[function(_dereq_,module,exports){
+},{"jxt":195}],88:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5560,7 +5560,7 @@ stanza.add(jingle.Jingle, 'ringing', stanza.boolSub(INFONS, 'ringing'));
 stanza.add(jingle.Jingle, 'hold', stanza.boolSub(INFONS, 'hold'));
 stanza.add(jingle.Jingle, 'active', stanza.boolSub(INFONS, 'active'));
 
-},{"./jingle":67,"jxt":187}],89:[function(_dereq_,module,exports){
+},{"./jingle":67,"jxt":195}],89:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 
 var Message = _dereq_('./message');
@@ -5663,7 +5663,7 @@ var RTT = module.exports = stanza.define({
 
 stanza.extend(Message, RTT);
 
-},{"./message":71,"jxt":187}],90:[function(_dereq_,module,exports){
+},{"./message":71,"jxt":195}],90:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5776,7 +5776,7 @@ exports.Failure = stanza.define({
 
 stanza.extend(StreamFeatures, exports.Mechanisms);
 
-},{"./streamFeatures":96,"./util":98,"jxt":187}],91:[function(_dereq_,module,exports){
+},{"./streamFeatures":96,"./util":98,"jxt":195}],91:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 var StreamFeatures = _dereq_('./streamFeatures');
@@ -5796,7 +5796,7 @@ var Session = module.exports = stanza.define({
 stanza.extend(StreamFeatures, Session);
 stanza.extend(Iq, Session);
 
-},{"./iq":66,"./streamFeatures":96,"jxt":187}],92:[function(_dereq_,module,exports){
+},{"./iq":66,"./streamFeatures":96,"jxt":195}],92:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Message = _dereq_('./message');
 var Presence = _dereq_('./presence');
@@ -5836,7 +5836,7 @@ var SHIM = module.exports = {
 stanza.add(Message, 'headers', SHIM);
 stanza.add(Presence, 'headers', SHIM);
 
-},{"./message":71,"./presence":77,"jxt":187}],93:[function(_dereq_,module,exports){
+},{"./message":71,"./presence":77,"jxt":195}],93:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var StreamFeatures = _dereq_('./streamFeatures');
 
@@ -5927,7 +5927,7 @@ exports.Request = stanza.define({
 
 stanza.extend(StreamFeatures, exports.SMFeature);
 
-},{"./streamFeatures":96,"jxt":187}],94:[function(_dereq_,module,exports){
+},{"./streamFeatures":96,"jxt":195}],94:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -5947,7 +5947,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"./util":98,"jxt":187}],95:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],95:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -6008,7 +6008,7 @@ module.exports = stanza.define({
     }
 });
 
-},{"./util":98,"jxt":187}],96:[function(_dereq_,module,exports){
+},{"./util":98,"jxt":195}],96:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -6037,7 +6037,7 @@ var SubscriptionPreApprovalFeature = stanza.define({
 stanza.extend(StreamFeatures, RosterVerFeature);
 stanza.extend(StreamFeatures, SubscriptionPreApprovalFeature);
 
-},{"jxt":187}],97:[function(_dereq_,module,exports){
+},{"jxt":195}],97:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -6058,7 +6058,7 @@ var EntityTime = module.exports = stanza.define({
 
 stanza.extend(Iq, EntityTime);
 
-},{"./iq":66,"./util":98,"jxt":187}],98:[function(_dereq_,module,exports){
+},{"./iq":66,"./util":98,"jxt":195}],98:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -6232,7 +6232,7 @@ exports.subMultiExtension = function (NS, sub, ChildJXT) {
     };
 };
 
-},{"../jid":3,"jxt":187,"underscore":208}],99:[function(_dereq_,module,exports){
+},{"../jid":3,"jxt":195,"underscore":218}],99:[function(_dereq_,module,exports){
 'use strict';
 
 var stanza = _dereq_('jxt');
@@ -6342,7 +6342,7 @@ stanza.extend(VCardTemp, Name);
 stanza.extend(VCardTemp, Photo);
 stanza.extend(Iq, VCardTemp);
 
-},{"./iq":66,"jxt":187}],100:[function(_dereq_,module,exports){
+},{"./iq":66,"jxt":195}],100:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 
@@ -6361,7 +6361,7 @@ var Version = module.exports = stanza.define({
 
 stanza.extend(Iq, Version);
 
-},{"./iq":66,"jxt":187}],101:[function(_dereq_,module,exports){
+},{"./iq":66,"jxt":195}],101:[function(_dereq_,module,exports){
 var stanza = _dereq_('jxt');
 var Iq = _dereq_('./iq');
 
@@ -6369,7 +6369,7 @@ var Iq = _dereq_('./iq');
 stanza.add(Iq, 'visible', stanza.boolSub('urn:xmpp:invisible:0', 'visible'));
 stanza.add(Iq, 'invisible', stanza.boolSub('urn:xmpp:invisible:0', 'invisible'));
 
-},{"./iq":66,"jxt":187}],102:[function(_dereq_,module,exports){
+},{"./iq":66,"jxt":195}],102:[function(_dereq_,module,exports){
 (function (process,Buffer){
 'use strict';
 
@@ -6615,7 +6615,7 @@ BOSHConnection.prototype.request = function (bosh) {
 module.exports = BOSHConnection;
 
 }).call(this,_dereq_("FWaASH"),_dereq_("buffer").Buffer)
-},{"../stanza/bosh":51,"../stanza/streamError":95,"FWaASH":156,"bluebird":109,"buffer":146,"jxt":187,"request":144,"underscore":208,"utf8":209,"util":158,"wildemitter":210}],103:[function(_dereq_,module,exports){
+},{"../stanza/bosh":51,"../stanza/streamError":95,"FWaASH":156,"bluebird":109,"buffer":146,"jxt":195,"request":144,"underscore":218,"utf8":219,"util":158,"wildemitter":220}],103:[function(_dereq_,module,exports){
 'use strict';
 
 var WSConnection = _dereq_('./websocket');
@@ -6729,7 +6729,7 @@ OldWSConnection.prototype.closeHeader = function () {
 
 module.exports = OldWSConnection;
 
-},{"../stanza/stream":94,"../stanza/streamError":95,"./websocket":104,"jxt":187,"underscore":208,"util":158}],104:[function(_dereq_,module,exports){
+},{"../stanza/stream":94,"../stanza/streamError":95,"./websocket":104,"jxt":195,"underscore":218,"util":158}],104:[function(_dereq_,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -6884,7 +6884,7 @@ WSConnection.prototype.send = function (data) {
 module.exports = WSConnection;
 
 }).call(this,_dereq_("buffer").Buffer)
-},{"../stanza/framing":62,"../stanza/streamError":95,"async":105,"buffer":146,"faye-websocket":145,"jxt":187,"utf8":209,"util":158,"wildemitter":210}],105:[function(_dereq_,module,exports){
+},{"../stanza/framing":62,"../stanza/streamError":95,"async":105,"buffer":146,"faye-websocket":145,"jxt":195,"utf8":219,"util":158,"wildemitter":220}],105:[function(_dereq_,module,exports){
 (function (process){
 /*!
  * async
@@ -16060,48 +16060,263 @@ function hasOwnProperty(obj, prop) {
 
 }).call(this,_dereq_("buffer").Buffer)
 },{"buffer":146}],160:[function(_dereq_,module,exports){
-var Buffer = _dereq_('buffer').Buffer
-var sha = _dereq_('./sha')
-var sha256 = _dereq_('./sha256')
+'use strict';
+
+var _ = _dereq_('underscore');
+var Promise = _dereq_('bluebird');
+var request = Promise.promisify(_dereq_('request'));
+
+var jxt = _dereq_('jxt');
+var XRD = _dereq_('./lib/xrd');
+
+
+module.exports = function (opts, cb) {
+    if (typeof opts === 'string') {
+        opts = {host: opts};
+    }
+    opts = _.extend({
+        ssl: true,
+        json: true,
+        xrd: true
+    }, opts);
+
+    var scheme = opts.ssl ? 'https://' : 'http://';
+
+    var getJSON = new Promise(function (resolve, reject) {
+        request(scheme + opts.host + '/.well-known/host-meta.json').spread(function (req, body) {
+            resolve(JSON.parse(body));
+        }).catch(reject);
+    });
+
+    var getXRD = new Promise(function (resolve, reject) {
+        request(scheme + opts.host + '/.well-known/host-meta').spread(function (req, body) {
+            var xrd = jxt.parse(body, XRD);
+            resolve(xrd.toJSON());
+        }).catch(reject);
+    });
+
+
+    return new Promise(function (resolve, reject) {
+        Promise.some([getJSON, getXRD], 1).spread(resolve).catch(function () {
+            reject('no-host-meta');
+        });
+    }).nodeify(cb);
+};
+
+},{"./lib/xrd":161,"bluebird":109,"jxt":195,"request":144,"underscore":218}],161:[function(_dereq_,module,exports){
+'use strict';
+
+var _ = _dereq_('underscore');
+var jxt = _dereq_('jxt');
+
+
+var NS = 'http://docs.oasis-open.org/ns/xri/xrd-1.0';
+
+var Properties = {
+    get: function () {
+        var results = {};
+        var props = jxt.find(this.xml, NS, 'Property');
+        _.each(props, function (property) {
+            var type = jxt.getAttribute(property, 'type');
+            results[type] = property.textContent;
+        });
+        return results;
+    }
+};
+
+var XRD = module.exports = jxt.define({
+    name: 'xrd',
+    namespace: NS,
+    element: 'XRD',
+    fields: {
+        subject: jxt.subText(NS, 'Subject'),
+        expires: jxt.dateSub(NS, 'Expires'),
+        aliases: jxt.multiSubText(NS, 'Alias'),
+        properties: Properties
+    }
+});
+
+
+var Link = jxt.define({
+    name: 'xrdlink',
+    namespace: NS,
+    element: 'Link',
+    fields: {
+        rel: jxt.attribute('rel'),
+        href: jxt.attribute('href'),
+        type: jxt.attribute('type'),
+        template: jxt.attribute('template'),
+        titles: jxt.subLangText(NS, 'Title', 'default'),
+        properties: Properties
+    }
+});
+
+
+jxt.extend(XRD, Link, 'links');
+
+},{"jxt":195,"underscore":218}],162:[function(_dereq_,module,exports){
+var crypto = _dereq_('crypto');
+
+var mapping = {
+    md2: 'md2',
+    md5: 'md5',
+    'sha-1': 'sha1',
+    'sha-224': 'sha224',
+    'sha-256': 'sha256',
+    'sha-384': 'sha384',
+    'sha-512': 'sha512'
+};
+
+var names = Object.keys(mapping);
+
+
+exports.getHashes = function () {
+    var result = [];
+    var available = crypto.getHashes();
+    for (var i = 0, len = names.length; i < len; i++) {
+        if (available.indexOf(mapping[names[i]]) >= 0) {
+            result.push(names[i]);
+        }
+    }
+    return result;
+};
+
+exports.createHash = function (algorithm) {
+    algorithm = algorithm.toLowerCase();
+    if (mapping[algorithm]) {
+        algorithm = mapping[algorithm];
+    }
+    return crypto.createHash(algorithm);
+};
+
+exports.createHmac = function (algorithm, key) {
+    algorithm = algorithm.toLowerCase();
+    if (mapping[algorithm]) {
+        algorithm = mapping[algorithm];
+    }
+    return crypto.createHmac(algorithm, key);
+};
+
+},{"crypto":166}],163:[function(_dereq_,module,exports){
+(function (Buffer){
+var createHash = _dereq_('sha.js')
+
+var md5 = toConstructor(_dereq_('./md5'))
+var rmd160 = toConstructor(_dereq_('ripemd160'))
+
+function toConstructor (fn) {
+  return function () {
+    var buffers = []
+    var m= {
+      update: function (data, enc) {
+        if(!Buffer.isBuffer(data)) data = new Buffer(data, enc)
+        buffers.push(data)
+        return this
+      },
+      digest: function (enc) {
+        var buf = Buffer.concat(buffers)
+        var r = fn(buf)
+        buffers = null
+        return enc ? r.toString(enc) : r
+      }
+    }
+    return m
+  }
+}
+
+module.exports = function (alg) {
+  if('md5' === alg) return new md5()
+  if('rmd160' === alg) return new rmd160()
+  return createHash(alg)
+}
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./md5":167,"buffer":146,"ripemd160":168,"sha.js":170}],164:[function(_dereq_,module,exports){
+(function (Buffer){
+var createHash = _dereq_('./create-hash')
+
+var blocksize = 64
+var zeroBuffer = new Buffer(blocksize); zeroBuffer.fill(0)
+
+module.exports = Hmac
+
+function Hmac (alg, key) {
+  if(!(this instanceof Hmac)) return new Hmac(alg, key)
+  this._opad = opad
+  this._alg = alg
+
+  key = this._key = !Buffer.isBuffer(key) ? new Buffer(key) : key
+
+  if(key.length > blocksize) {
+    key = createHash(alg).update(key).digest()
+  } else if(key.length < blocksize) {
+    key = Buffer.concat([key, zeroBuffer], blocksize)
+  }
+
+  var ipad = this._ipad = new Buffer(blocksize)
+  var opad = this._opad = new Buffer(blocksize)
+
+  for(var i = 0; i < blocksize; i++) {
+    ipad[i] = key[i] ^ 0x36
+    opad[i] = key[i] ^ 0x5C
+  }
+
+  this._hash = createHash(alg).update(ipad)
+}
+
+Hmac.prototype.update = function (data, enc) {
+  this._hash.update(data, enc)
+  return this
+}
+
+Hmac.prototype.digest = function (enc) {
+  var h = this._hash.digest()
+  return createHash(this._alg).update(this._opad).update(h).digest(enc)
+}
+
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"./create-hash":163,"buffer":146}],165:[function(_dereq_,module,exports){
+(function (Buffer){
+var intSize = 4;
+var zeroBuffer = new Buffer(intSize); zeroBuffer.fill(0);
+var chrsz = 8;
+
+function toArray(buf, bigEndian) {
+  if ((buf.length % intSize) !== 0) {
+    var len = buf.length + (intSize - (buf.length % intSize));
+    buf = Buffer.concat([buf, zeroBuffer], len);
+  }
+
+  var arr = [];
+  var fn = bigEndian ? buf.readInt32BE : buf.readInt32LE;
+  for (var i = 0; i < buf.length; i += intSize) {
+    arr.push(fn.call(buf, i));
+  }
+  return arr;
+}
+
+function toBuffer(arr, size, bigEndian) {
+  var buf = new Buffer(size);
+  var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;
+  for (var i = 0; i < arr.length; i++) {
+    fn.call(buf, arr[i], i * 4, true);
+  }
+  return buf;
+}
+
+function hash(buf, fn, hashSize, bigEndian) {
+  if (!Buffer.isBuffer(buf)) buf = new Buffer(buf);
+  var arr = fn(toArray(buf, bigEndian), buf.length * chrsz);
+  return toBuffer(arr, hashSize, bigEndian);
+}
+
+module.exports = { hash: hash };
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":146}],166:[function(_dereq_,module,exports){
+(function (Buffer){
 var rng = _dereq_('./rng')
-var md5 = _dereq_('./md5')
-
-var algorithms = {
-  sha1: {
-    hex: sha.hex_sha1,
-    base64: sha.b64_sha1,
-    binary: sha.str_sha1
-  },
-  sha256: {
-    hex: sha256.hex_sha256,
-    base64: sha256.b64_sha256,
-    binary: sha256.str_sha256
-  },
-  md5: {
-    hex: md5.hex_md5,
-    base64: md5.b64_md5,
-    binary: md5.bin_md5
-  }
-}
-
-var algorithmsHmac = {
-  sha1: {
-    hex: sha.hex_hmac_sha1,
-    base64: sha.b64_hmac_sha1,
-    binary: sha.str_hmac_sha1
-  },
-  sha256: {
-    hex: sha256.hex_hmac_sha256,
-    base64: sha256.b64_hmac_sha256,
-    binary: sha256.str_hmac_sha256
-  },
-  md5: {
-    hex: md5.hex_hmac_md5,
-    base64: md5.b64_hmac_md5,
-    binary: md5.bin_hmac_md5
-  }
-}
-
 
 function error () {
   var m = [].slice.call(arguments).join(' ')
@@ -16112,60 +16327,17 @@ function error () {
     ].join('\n'))
 }
 
-exports.createHash = function (alg) {
-  alg = alg || 'sha1'
-  if(!algorithms[alg])
-    error('algorithm:', alg, 'is not yet supported')
-  var s = ''
-  var _alg = algorithms[alg]
-  return {
-    update: function (data) {
-      s += data
-      return this
-    },
-    digest: function (enc) {
-      enc = enc || 'binary'
-      var fn
-      if(!(fn = _alg[enc]))
-        error('encoding:', enc , 'is not yet supported for algorithm', alg)
-      var r = fn(s)
-      s = null //not meant to use the hash after you've called digest.
-      return r
-    }
-  }
-}
+exports.createHash = _dereq_('./create-hash')
 
-exports.createHmac = function (alg, key) {
-  if (!algorithmsHmac[alg])
-    error('algorithm:', alg, 'is not yet supported')
-  if (typeof key != 'string')
-    key = key.toString('binary')
-  var s = ''
-  var _alg = algorithmsHmac[alg]
-  return {
-    update: function (data) {
-      s += data
-      return this
-    },
-    digest: function (enc) {
-      enc = enc || 'binary'
-      var fn
-      if (!(fn = _alg[enc]))
-        error('encoding:', enc, 'is not yet support for algorithm', alg)
-      var r = fn(key, s)
-      s = null
-      return r
-    }
-  }
-}
+exports.createHmac = _dereq_('./create-hmac')
 
 exports.randomBytes = function(size, callback) {
   if (callback && callback.call) {
     try {
-      callback.call(this, undefined, new Buffer(rng(size)));
-    } catch (err) { callback(err); }
+      callback.call(this, undefined, new Buffer(rng(size)))
+    } catch (err) { callback(err) }
   } else {
-    return new Buffer(rng(size));
+    return new Buffer(rng(size))
   }
 }
 
@@ -16173,6 +16345,16 @@ function each(a, f) {
   for(var i in a)
     f(a[i], i)
 }
+
+exports.getHashes = function () {
+  return ['sha1', 'sha256', 'md5', 'rmd160']
+
+}
+
+var p = _dereq_('./pbkdf2')(exports.createHmac)
+exports.pbkdf2 = p.pbkdf2
+exports.pbkdf2Sync = p.pbkdf2Sync
+
 
 // the least I can do is make error messages for the rest of the node.js/crypto api.
 each(['createCredentials'
@@ -16183,13 +16365,14 @@ each(['createCredentials'
 , 'createSign'
 , 'createVerify'
 , 'createDiffieHellman'
-, 'pbkdf2'], function (name) {
+], function (name) {
   exports[name] = function () {
     error('sorry,', name, 'is not implemented yet')
   }
 })
 
-},{"./md5":161,"./rng":162,"./sha":163,"./sha256":164,"buffer":146}],161:[function(_dereq_,module,exports){
+}).call(this,_dereq_("buffer").Buffer)
+},{"./create-hash":163,"./create-hmac":164,"./pbkdf2":174,"./rng":175,"buffer":146}],167:[function(_dereq_,module,exports){
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
  * Digest Algorithm, as defined in RFC 1321.
@@ -16199,32 +16382,7 @@ each(['createCredentials'
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
 
-/*
- * Configurable variables. You may need to tweak these to be compatible with
- * the server-side, but the defaults work in most cases.
- */
-var hexcase = 0;   /* hex output format. 0 - lowercase; 1 - uppercase        */
-var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
-var chrsz   = 8;   /* bits per input character. 8 - ASCII; 16 - Unicode      */
-
-/*
- * These are the functions you'll usually want to call
- * They take string arguments and return either hex or base-64 encoded strings
- */
-function hex_md5(s){ return binl2hex(core_md5(str2binl(s), s.length * chrsz));}
-function b64_md5(s){ return binl2b64(core_md5(str2binl(s), s.length * chrsz));}
-function str_md5(s){ return binl2str(core_md5(str2binl(s), s.length * chrsz));}
-function hex_hmac_md5(key, data) { return binl2hex(core_hmac_md5(key, data)); }
-function b64_hmac_md5(key, data) { return binl2b64(core_hmac_md5(key, data)); }
-function str_hmac_md5(key, data) { return binl2str(core_hmac_md5(key, data)); }
-
-/*
- * Perform a simple self-test to see if the VM is working
- */
-function md5_vm_test()
-{
-  return hex_md5("abc") == "900150983cd24fb0d6963f7d28e17f72";
-}
+var helpers = _dereq_('./helpers');
 
 /*
  * Calculate the MD5 of an array of little-endian words, and a bit length
@@ -16349,25 +16507,6 @@ function md5_ii(a, b, c, d, x, s, t)
 }
 
 /*
- * Calculate the HMAC-MD5, of a key and some data
- */
-function core_hmac_md5(key, data)
-{
-  var bkey = str2binl(key);
-  if(bkey.length > 16) bkey = core_md5(bkey, key.length * chrsz);
-
-  var ipad = Array(16), opad = Array(16);
-  for(var i = 0; i < 16; i++)
-  {
-    ipad[i] = bkey[i] ^ 0x36363636;
-    opad[i] = bkey[i] ^ 0x5C5C5C5C;
-  }
-
-  var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
-  return core_md5(opad.concat(hash), 512 + 128);
-}
-
-/*
  * Add integers, wrapping at 2^32. This uses 16-bit operations internally
  * to work around bugs in some JS interpreters.
  */
@@ -16386,77 +16525,789 @@ function bit_rol(num, cnt)
   return (num << cnt) | (num >>> (32 - cnt));
 }
 
-/*
- * Convert a string to an array of little-endian words
- * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
- */
-function str2binl(str)
-{
-  var bin = Array();
-  var mask = (1 << chrsz) - 1;
-  for(var i = 0; i < str.length * chrsz; i += chrsz)
-    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (i%32);
-  return bin;
-}
+module.exports = function md5(buf) {
+  return helpers.hash(buf, core_md5, 16);
+};
+
+},{"./helpers":165}],168:[function(_dereq_,module,exports){
+(function (Buffer){
+
+module.exports = ripemd160
+
+
 
 /*
- * Convert an array of little-endian words to a string
- */
-function binl2str(bin)
-{
-  var str = "";
-  var mask = (1 << chrsz) - 1;
-  for(var i = 0; i < bin.length * 32; i += chrsz)
-    str += String.fromCharCode((bin[i>>5] >>> (i % 32)) & mask);
-  return str;
-}
+CryptoJS v3.1.2
+code.google.com/p/crypto-js
+(c) 2009-2013 by Jeff Mott. All rights reserved.
+code.google.com/p/crypto-js/wiki/License
+*/
+/** @preserve
+(c) 2012 by Cédric Mesnil. All rights reserved.
 
-/*
- * Convert an array of little-endian words to a hex string.
- */
-function binl2hex(binarray)
-{
-  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
-  var str = "";
-  for(var i = 0; i < binarray.length * 4; i++)
-  {
-    str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +
-           hex_tab.charAt((binarray[i>>2] >> ((i%4)*8  )) & 0xF);
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+// Constants table
+var zl = [
+    0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15,
+    7,  4, 13,  1, 10,  6, 15,  3, 12,  0,  9,  5,  2, 14, 11,  8,
+    3, 10, 14,  4,  9, 15,  8,  1,  2,  7,  0,  6, 13, 11,  5, 12,
+    1,  9, 11, 10,  0,  8, 12,  4, 13,  3,  7, 15, 14,  5,  6,  2,
+    4,  0,  5,  9,  7, 12,  2, 10, 14,  1,  3,  8, 11,  6, 15, 13];
+var zr = [
+    5, 14,  7,  0,  9,  2, 11,  4, 13,  6, 15,  8,  1, 10,  3, 12,
+    6, 11,  3,  7,  0, 13,  5, 10, 14, 15,  8, 12,  4,  9,  1,  2,
+    15,  5,  1,  3,  7, 14,  6,  9, 11,  8, 12,  2, 10,  0,  4, 13,
+    8,  6,  4,  1,  3, 11, 15,  0,  5, 12,  2, 13,  9,  7, 10, 14,
+    12, 15, 10,  4,  1,  5,  8,  7,  6,  2, 13, 14,  0,  3,  9, 11];
+var sl = [
+     11, 14, 15, 12,  5,  8,  7,  9, 11, 13, 14, 15,  6,  7,  9,  8,
+    7, 6,   8, 13, 11,  9,  7, 15,  7, 12, 15,  9, 11,  7, 13, 12,
+    11, 13,  6,  7, 14,  9, 13, 15, 14,  8, 13,  6,  5, 12,  7,  5,
+      11, 12, 14, 15, 14, 15,  9,  8,  9, 14,  5,  6,  8,  6,  5, 12,
+    9, 15,  5, 11,  6,  8, 13, 12,  5, 12, 13, 14, 11,  8,  5,  6 ];
+var sr = [
+    8,  9,  9, 11, 13, 15, 15,  5,  7,  7,  8, 11, 14, 14, 12,  6,
+    9, 13, 15,  7, 12,  8,  9, 11,  7,  7, 12,  7,  6, 15, 13, 11,
+    9,  7, 15, 11,  8,  6,  6, 14, 12, 13,  5, 14, 13, 13,  7,  5,
+    15,  5,  8, 11, 14, 14,  6, 14,  6,  9, 12,  9, 12,  5, 15,  8,
+    8,  5, 12,  9, 12,  5, 14,  6,  8, 13,  6,  5, 15, 13, 11, 11 ];
+
+var hl =  [ 0x00000000, 0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xA953FD4E];
+var hr =  [ 0x50A28BE6, 0x5C4DD124, 0x6D703EF3, 0x7A6D76E9, 0x00000000];
+
+var bytesToWords = function (bytes) {
+  var words = [];
+  for (var i = 0, b = 0; i < bytes.length; i++, b += 8) {
+    words[b >>> 5] |= bytes[i] << (24 - b % 32);
   }
-  return str;
+  return words;
+};
+
+var wordsToBytes = function (words) {
+  var bytes = [];
+  for (var b = 0; b < words.length * 32; b += 8) {
+    bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF);
+  }
+  return bytes;
+};
+
+var processBlock = function (H, M, offset) {
+
+  // Swap endian
+  for (var i = 0; i < 16; i++) {
+    var offset_i = offset + i;
+    var M_offset_i = M[offset_i];
+
+    // Swap
+    M[offset_i] = (
+        (((M_offset_i << 8)  | (M_offset_i >>> 24)) & 0x00ff00ff) |
+        (((M_offset_i << 24) | (M_offset_i >>> 8))  & 0xff00ff00)
+    );
+  }
+
+  // Working variables
+  var al, bl, cl, dl, el;
+  var ar, br, cr, dr, er;
+
+  ar = al = H[0];
+  br = bl = H[1];
+  cr = cl = H[2];
+  dr = dl = H[3];
+  er = el = H[4];
+  // Computation
+  var t;
+  for (var i = 0; i < 80; i += 1) {
+    t = (al +  M[offset+zl[i]])|0;
+    if (i<16){
+        t +=  f1(bl,cl,dl) + hl[0];
+    } else if (i<32) {
+        t +=  f2(bl,cl,dl) + hl[1];
+    } else if (i<48) {
+        t +=  f3(bl,cl,dl) + hl[2];
+    } else if (i<64) {
+        t +=  f4(bl,cl,dl) + hl[3];
+    } else {// if (i<80) {
+        t +=  f5(bl,cl,dl) + hl[4];
+    }
+    t = t|0;
+    t =  rotl(t,sl[i]);
+    t = (t+el)|0;
+    al = el;
+    el = dl;
+    dl = rotl(cl, 10);
+    cl = bl;
+    bl = t;
+
+    t = (ar + M[offset+zr[i]])|0;
+    if (i<16){
+        t +=  f5(br,cr,dr) + hr[0];
+    } else if (i<32) {
+        t +=  f4(br,cr,dr) + hr[1];
+    } else if (i<48) {
+        t +=  f3(br,cr,dr) + hr[2];
+    } else if (i<64) {
+        t +=  f2(br,cr,dr) + hr[3];
+    } else {// if (i<80) {
+        t +=  f1(br,cr,dr) + hr[4];
+    }
+    t = t|0;
+    t =  rotl(t,sr[i]) ;
+    t = (t+er)|0;
+    ar = er;
+    er = dr;
+    dr = rotl(cr, 10);
+    cr = br;
+    br = t;
+  }
+  // Intermediate hash value
+  t    = (H[1] + cl + dr)|0;
+  H[1] = (H[2] + dl + er)|0;
+  H[2] = (H[3] + el + ar)|0;
+  H[3] = (H[4] + al + br)|0;
+  H[4] = (H[0] + bl + cr)|0;
+  H[0] =  t;
+};
+
+function f1(x, y, z) {
+  return ((x) ^ (y) ^ (z));
 }
 
+function f2(x, y, z) {
+  return (((x)&(y)) | ((~x)&(z)));
+}
+
+function f3(x, y, z) {
+  return (((x) | (~(y))) ^ (z));
+}
+
+function f4(x, y, z) {
+  return (((x) & (z)) | ((y)&(~(z))));
+}
+
+function f5(x, y, z) {
+  return ((x) ^ ((y) |(~(z))));
+}
+
+function rotl(x,n) {
+  return (x<<n) | (x>>>(32-n));
+}
+
+function ripemd160(message) {
+  var H = [0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0];
+
+  if (typeof message == 'string')
+    message = new Buffer(message, 'utf8');
+
+  var m = bytesToWords(message);
+
+  var nBitsLeft = message.length * 8;
+  var nBitsTotal = message.length * 8;
+
+  // Add padding
+  m[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32);
+  m[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
+      (((nBitsTotal << 8)  | (nBitsTotal >>> 24)) & 0x00ff00ff) |
+      (((nBitsTotal << 24) | (nBitsTotal >>> 8))  & 0xff00ff00)
+  );
+
+  for (var i=0 ; i<m.length; i += 16) {
+    processBlock(H, m, i);
+  }
+
+  // Swap endian
+  for (var i = 0; i < 5; i++) {
+      // Shortcut
+    var H_i = H[i];
+
+    // Swap
+    H[i] = (((H_i << 8)  | (H_i >>> 24)) & 0x00ff00ff) |
+          (((H_i << 24) | (H_i >>> 8))  & 0xff00ff00);
+  }
+
+  var digestbytes = wordsToBytes(H);
+  return new Buffer(digestbytes);
+}
+
+
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":146}],169:[function(_dereq_,module,exports){
+var u = _dereq_('./util')
+var write = u.write
+var fill = u.zeroFill
+
+module.exports = function (Buffer) {
+
+  //prototype class for hash functions
+  function Hash (blockSize, finalSize) {
+    this._block = new Buffer(blockSize) //new Uint32Array(blockSize/4)
+    this._finalSize = finalSize
+    this._blockSize = blockSize
+    this._len = 0
+    this._s = 0
+  }
+
+  Hash.prototype.init = function () {
+    this._s = 0
+    this._len = 0
+  }
+
+  function lengthOf(data, enc) {
+    if(enc == null)     return data.byteLength || data.length
+    if(enc == 'ascii' || enc == 'binary')  return data.length
+    if(enc == 'hex')    return data.length/2
+    if(enc == 'base64') return data.length/3
+  }
+
+  Hash.prototype.update = function (data, enc) {
+    var bl = this._blockSize
+
+    //I'd rather do this with a streaming encoder, like the opposite of
+    //http://nodejs.org/api/string_decoder.html
+    var length
+      if(!enc && 'string' === typeof data)
+        enc = 'utf8'
+
+    if(enc) {
+      if(enc === 'utf-8')
+        enc = 'utf8'
+
+      if(enc === 'base64' || enc === 'utf8')
+        data = new Buffer(data, enc), enc = null
+
+      length = lengthOf(data, enc)
+    } else
+      length = data.byteLength || data.length
+
+    var l = this._len += length
+    var s = this._s = (this._s || 0)
+    var f = 0
+    var buffer = this._block
+    while(s < l) {
+      var t = Math.min(length, f + bl)
+      write(buffer, data, enc, s%bl, f, t)
+      var ch = (t - f);
+      s += ch; f += ch
+
+      if(!(s%bl))
+        this._update(buffer)
+    }
+    this._s = s
+
+    return this
+
+  }
+
+  Hash.prototype.digest = function (enc) {
+    var bl = this._blockSize
+    var fl = this._finalSize
+    var len = this._len*8
+
+    var x = this._block
+
+    var bits = len % (bl*8)
+
+    //add end marker, so that appending 0's creats a different hash.
+    x[this._len % bl] = 0x80
+    fill(this._block, this._len % bl + 1)
+
+    if(bits >= fl*8) {
+      this._update(this._block)
+      u.zeroFill(this._block, 0)
+    }
+
+    //TODO: handle case where the bit length is > Math.pow(2, 29)
+    x.writeInt32BE(len, fl + 4) //big endian
+
+    var hash = this._update(this._block) || this._hash()
+    if(enc == null) return hash
+    return hash.toString(enc)
+  }
+
+  Hash.prototype._update = function () {
+    throw new Error('_update must be implemented by subclass')
+  }
+
+  return Hash
+}
+
+},{"./util":173}],170:[function(_dereq_,module,exports){
+var exports = module.exports = function (alg) {
+  var Alg = exports[alg]
+  if(!Alg) throw new Error(alg + ' is not supported (we accept pull requests)')
+  return new Alg()
+}
+
+var Buffer = _dereq_('buffer').Buffer
+var Hash   = _dereq_('./hash')(Buffer)
+
+exports.sha =
+exports.sha1 = _dereq_('./sha1')(Buffer, Hash)
+exports.sha256 = _dereq_('./sha256')(Buffer, Hash)
+
+},{"./hash":169,"./sha1":171,"./sha256":172,"buffer":146}],171:[function(_dereq_,module,exports){
 /*
- * Convert an array of little-endian words to a base-64 string
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
+ * in FIPS PUB 180-1
+ * Version 2.1a Copyright Paul Johnston 2000 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for details.
  */
-function binl2b64(binarray)
-{
-  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  var str = "";
-  for(var i = 0; i < binarray.length * 4; i += 3)
-  {
-    var triplet = (((binarray[i   >> 2] >> 8 * ( i   %4)) & 0xFF) << 16)
-                | (((binarray[i+1 >> 2] >> 8 * ((i+1)%4)) & 0xFF) << 8 )
-                |  ((binarray[i+2 >> 2] >> 8 * ((i+2)%4)) & 0xFF);
-    for(var j = 0; j < 4; j++)
-    {
-      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
-      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+module.exports = function (Buffer, Hash) {
+
+  var inherits = _dereq_('util').inherits
+
+  inherits(Sha1, Hash)
+
+  var A = 0|0
+  var B = 4|0
+  var C = 8|0
+  var D = 12|0
+  var E = 16|0
+
+  var BE = false
+  var LE = true
+
+  var W = new Int32Array(80)
+
+  var POOL = []
+
+  function Sha1 () {
+    if(POOL.length)
+      return POOL.pop().init()
+
+    if(!(this instanceof Sha1)) return new Sha1()
+    this._w = W
+    Hash.call(this, 16*4, 14*4)
+  
+    this._h = null
+    this.init()
+  }
+
+  Sha1.prototype.init = function () {
+    this._a = 0x67452301
+    this._b = 0xefcdab89
+    this._c = 0x98badcfe
+    this._d = 0x10325476
+    this._e = 0xc3d2e1f0
+
+    Hash.prototype.init.call(this)
+    return this
+  }
+
+  Sha1.prototype._POOL = POOL
+
+  // assume that array is a Uint32Array with length=16,
+  // and that if it is the last block, it already has the length and the 1 bit appended.
+
+
+  var isDV = new Buffer(1) instanceof DataView
+  function readInt32BE (X, i) {
+    return isDV
+      ? X.getInt32(i, false)
+      : X.readInt32BE(i)
+  }
+
+  Sha1.prototype._update = function (array) {
+
+    var X = this._block
+    var h = this._h
+    var a, b, c, d, e, _a, _b, _c, _d, _e
+
+    a = _a = this._a
+    b = _b = this._b
+    c = _c = this._c
+    d = _d = this._d
+    e = _e = this._e
+
+    var w = this._w
+
+    for(var j = 0; j < 80; j++) {
+      var W = w[j]
+        = j < 16
+        //? X.getInt32(j*4, false)
+        //? readInt32BE(X, j*4) //*/ X.readInt32BE(j*4) //*/
+        ? X.readInt32BE(j*4)
+        : rol(w[j - 3] ^ w[j -  8] ^ w[j - 14] ^ w[j - 16], 1)
+
+      var t =
+        add(
+          add(rol(a, 5), sha1_ft(j, b, c, d)),
+          add(add(e, W), sha1_kt(j))
+        );
+
+      e = d
+      d = c
+      c = rol(b, 30)
+      b = a
+      a = t
+    }
+
+    this._a = add(a, _a)
+    this._b = add(b, _b)
+    this._c = add(c, _c)
+    this._d = add(d, _d)
+    this._e = add(e, _e)
+  }
+
+  Sha1.prototype._hash = function () {
+    if(POOL.length < 100) POOL.push(this)
+    var H = new Buffer(20)
+    //console.log(this._a|0, this._b|0, this._c|0, this._d|0, this._e|0)
+    H.writeInt32BE(this._a|0, A)
+    H.writeInt32BE(this._b|0, B)
+    H.writeInt32BE(this._c|0, C)
+    H.writeInt32BE(this._d|0, D)
+    H.writeInt32BE(this._e|0, E)
+    return H
+  }
+
+  /*
+   * Perform the appropriate triplet combination function for the current
+   * iteration
+   */
+  function sha1_ft(t, b, c, d) {
+    if(t < 20) return (b & c) | ((~b) & d);
+    if(t < 40) return b ^ c ^ d;
+    if(t < 60) return (b & c) | (b & d) | (c & d);
+    return b ^ c ^ d;
+  }
+
+  /*
+   * Determine the appropriate additive constant for the current iteration
+   */
+  function sha1_kt(t) {
+    return (t < 20) ?  1518500249 : (t < 40) ?  1859775393 :
+           (t < 60) ? -1894007588 : -899497514;
+  }
+
+  /*
+   * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+   * to work around bugs in some JS interpreters.
+   * //dominictarr: this is 10 years old, so maybe this can be dropped?)
+   *
+   */
+  function add(x, y) {
+    return (x + y ) | 0
+  //lets see how this goes on testling.
+  //  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  //  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  //  return (msw << 16) | (lsw & 0xFFFF);
+  }
+
+  /*
+   * Bitwise rotate a 32-bit number to the left.
+   */
+  function rol(num, cnt) {
+    return (num << cnt) | (num >>> (32 - cnt));
+  }
+
+  return Sha1
+}
+
+},{"util":158}],172:[function(_dereq_,module,exports){
+
+/**
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
+ * in FIPS 180-2
+ * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ *
+ */
+
+var inherits = _dereq_('util').inherits
+var BE       = false
+var LE       = true
+var u        = _dereq_('./util')
+
+module.exports = function (Buffer, Hash) {
+
+  var K = [
+      0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5,
+      0x3956C25B, 0x59F111F1, 0x923F82A4, 0xAB1C5ED5,
+      0xD807AA98, 0x12835B01, 0x243185BE, 0x550C7DC3,
+      0x72BE5D74, 0x80DEB1FE, 0x9BDC06A7, 0xC19BF174,
+      0xE49B69C1, 0xEFBE4786, 0x0FC19DC6, 0x240CA1CC,
+      0x2DE92C6F, 0x4A7484AA, 0x5CB0A9DC, 0x76F988DA,
+      0x983E5152, 0xA831C66D, 0xB00327C8, 0xBF597FC7,
+      0xC6E00BF3, 0xD5A79147, 0x06CA6351, 0x14292967,
+      0x27B70A85, 0x2E1B2138, 0x4D2C6DFC, 0x53380D13,
+      0x650A7354, 0x766A0ABB, 0x81C2C92E, 0x92722C85,
+      0xA2BFE8A1, 0xA81A664B, 0xC24B8B70, 0xC76C51A3,
+      0xD192E819, 0xD6990624, 0xF40E3585, 0x106AA070,
+      0x19A4C116, 0x1E376C08, 0x2748774C, 0x34B0BCB5,
+      0x391C0CB3, 0x4ED8AA4A, 0x5B9CCA4F, 0x682E6FF3,
+      0x748F82EE, 0x78A5636F, 0x84C87814, 0x8CC70208,
+      0x90BEFFFA, 0xA4506CEB, 0xBEF9A3F7, 0xC67178F2
+    ]
+
+  inherits(Sha256, Hash)
+  var W = new Array(64)
+  var POOL = []
+  function Sha256() {
+    if(POOL.length) {
+      //return POOL.shift().init()
+    }
+    //this._data = new Buffer(32)
+
+    this.init()
+
+    this._w = W //new Array(64)
+
+    Hash.call(this, 16*4, 14*4)
+  };
+
+  Sha256.prototype.init = function () {
+
+    this._a = 0x6a09e667|0
+    this._b = 0xbb67ae85|0
+    this._c = 0x3c6ef372|0
+    this._d = 0xa54ff53a|0
+    this._e = 0x510e527f|0
+    this._f = 0x9b05688c|0
+    this._g = 0x1f83d9ab|0
+    this._h = 0x5be0cd19|0
+
+    this._len = this._s = 0
+
+    return this
+  }
+
+  var safe_add = function(x, y) {
+    var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+    var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+    return (msw << 16) | (lsw & 0xFFFF);
+  }
+
+  function S (X, n) {
+    return (X >>> n) | (X << (32 - n));
+  }
+
+  function R (X, n) {
+    return (X >>> n);
+  }
+
+  function Ch (x, y, z) {
+    return ((x & y) ^ ((~x) & z));
+  }
+
+  function Maj (x, y, z) {
+    return ((x & y) ^ (x & z) ^ (y & z));
+  }
+
+  function Sigma0256 (x) {
+    return (S(x, 2) ^ S(x, 13) ^ S(x, 22));
+  }
+
+  function Sigma1256 (x) {
+    return (S(x, 6) ^ S(x, 11) ^ S(x, 25));
+  }
+
+  function Gamma0256 (x) {
+    return (S(x, 7) ^ S(x, 18) ^ R(x, 3));
+  }
+
+  function Gamma1256 (x) {
+    return (S(x, 17) ^ S(x, 19) ^ R(x, 10));
+  }
+
+  Sha256.prototype._update = function(m) {
+    var M = this._block
+    var W = this._w
+    var a, b, c, d, e, f, g, h
+    var T1, T2
+
+    a = this._a | 0
+    b = this._b | 0
+    c = this._c | 0
+    d = this._d | 0
+    e = this._e | 0
+    f = this._f | 0
+    g = this._g | 0
+    h = this._h | 0
+
+    for (var j = 0; j < 64; j++) {
+      var w = W[j] = j < 16
+        ? M.readInt32BE(j * 4)
+        : Gamma1256(W[j - 2]) + W[j - 7] + Gamma0256(W[j - 15]) + W[j - 16]
+
+      T1 = h + Sigma1256(e) + Ch(e, f, g) + K[j] + w
+
+      T2 = Sigma0256(a) + Maj(a, b, c);
+      h = g; g = f; f = e; e = d + T1; d = c; c = b; b = a; a = T1 + T2;
+    }
+
+    this._a = (a + this._a) | 0
+    this._b = (b + this._b) | 0
+    this._c = (c + this._c) | 0
+    this._d = (d + this._d) | 0
+    this._e = (e + this._e) | 0
+    this._f = (f + this._f) | 0
+    this._g = (g + this._g) | 0
+    this._h = (h + this._h) | 0
+
+  };
+
+  Sha256.prototype._hash = function () {
+    if(POOL.length < 10)
+      POOL.push(this)
+
+    var H = new Buffer(32)
+
+    H.writeInt32BE(this._a,  0)
+    H.writeInt32BE(this._b,  4)
+    H.writeInt32BE(this._c,  8)
+    H.writeInt32BE(this._d, 12)
+    H.writeInt32BE(this._e, 16)
+    H.writeInt32BE(this._f, 20)
+    H.writeInt32BE(this._g, 24)
+    H.writeInt32BE(this._h, 28)
+
+    return H
+  }
+
+  return Sha256
+
+}
+
+},{"./util":173,"util":158}],173:[function(_dereq_,module,exports){
+exports.write = write
+exports.zeroFill = zeroFill
+
+exports.toString = toString
+
+function write (buffer, string, enc, start, from, to, LE) {
+  var l = (to - from)
+  if(enc === 'ascii' || enc === 'binary') {
+    for( var i = 0; i < l; i++) {
+      buffer[start + i] = string.charCodeAt(i + from)
     }
   }
-  return str;
+  else if(enc == null) {
+    for( var i = 0; i < l; i++) {
+      buffer[start + i] = string[i + from]
+    }
+  }
+  else if(enc === 'hex') {
+    for(var i = 0; i < l; i++) {
+      var j = from + i
+      buffer[start + i] = parseInt(string[j*2] + string[(j*2)+1], 16)
+    }
+  }
+  else if(enc === 'base64') {
+    throw new Error('base64 encoding not yet supported')
+  }
+  else
+    throw new Error(enc +' encoding not yet supported')
 }
 
-exports.hex_md5 = hex_md5;
-exports.b64_md5 = b64_md5;
-exports.bin_md5 = str_md5;
-exports.hex_hmac_md5 = hex_hmac_md5;
-exports.b64_hmac_md5 = b64_hmac_md5;
-exports.bin_hmac_md5 = str_hmac_md5;
+//always fill to the end!
+function zeroFill(buf, from) {
+  for(var i = from; i < buf.length; i++)
+    buf[i] = 0
+}
 
-},{}],162:[function(_dereq_,module,exports){
+
+},{}],174:[function(_dereq_,module,exports){
+(function (Buffer){
+// JavaScript PBKDF2 Implementation
+// Based on http://git.io/qsv2zw
+// Licensed under LGPL v3
+// Copyright (c) 2013 jduncanator
+
+var blocksize = 64
+var zeroBuffer = new Buffer(blocksize); zeroBuffer.fill(0)
+
+module.exports = function (createHmac, exports) {
+  exports = exports || {}
+
+  exports.pbkdf2 = function(password, salt, iterations, keylen, cb) {
+    if('function' !== typeof cb)
+      throw new Error('No callback provided to pbkdf2');
+    setTimeout(function () {
+      cb(null, exports.pbkdf2Sync(password, salt, iterations, keylen))
+    })
+  }
+
+  exports.pbkdf2Sync = function(key, salt, iterations, keylen) {
+    if('number' !== typeof iterations)
+      throw new TypeError('Iterations not a number')
+    if(iterations < 0)
+      throw new TypeError('Bad iterations')
+    if('number' !== typeof keylen)
+      throw new TypeError('Key length not a number')
+    if(keylen < 0)
+      throw new TypeError('Bad key length')
+
+    //stretch key to the correct length that hmac wants it,
+    //otherwise this will happen every time hmac is called
+    //twice per iteration.
+    var key = !Buffer.isBuffer(key) ? new Buffer(key) : key
+
+    if(key.length > blocksize) {
+      key = createHash(alg).update(key).digest()
+    } else if(key.length < blocksize) {
+      key = Buffer.concat([key, zeroBuffer], blocksize)
+    }
+
+    var HMAC;
+    var cplen, p = 0, i = 1, itmp = new Buffer(4), digtmp;
+    var out = new Buffer(keylen);
+    out.fill(0);
+    while(keylen) {
+      if(keylen > 20)
+        cplen = 20;
+      else
+        cplen = keylen;
+
+      /* We are unlikely to ever use more than 256 blocks (5120 bits!)
+         * but just in case...
+         */
+        itmp[0] = (i >> 24) & 0xff;
+        itmp[1] = (i >> 16) & 0xff;
+          itmp[2] = (i >> 8) & 0xff;
+          itmp[3] = i & 0xff;
+
+          HMAC = createHmac('sha1', key);
+          HMAC.update(salt)
+          HMAC.update(itmp);
+        digtmp = HMAC.digest();
+        digtmp.copy(out, p, 0, cplen);
+
+        for(var j = 1; j < iterations; j++) {
+          HMAC = createHmac('sha1', key);
+          HMAC.update(digtmp);
+          digtmp = HMAC.digest();
+          for(var k = 0; k < cplen; k++) {
+            out[k] ^= digtmp[k];
+          }
+        }
+      keylen -= cplen;
+      i++;
+      p += cplen;
+    }
+
+    return out;
+  }
+
+  return exports
+}
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":146}],175:[function(_dereq_,module,exports){
+(function (Buffer){
 // Original code adapted from Robert Kieffer.
 // details at https://github.com/broofa/node-uuid
+
+
 (function() {
   var _global = this;
 
@@ -16464,7 +17315,7 @@ exports.bin_hmac_md5 = str_hmac_md5;
 
   // NOTE: Math.random() does not guarantee "cryptographic quality"
   mathRNG = function(size) {
-    var bytes = new Array(size);
+    var bytes = new Buffer(size);
     var r;
 
     for (var i = 0, r; i < size; i++) {
@@ -16476,14 +17327,9 @@ exports.bin_hmac_md5 = str_hmac_md5;
   }
 
   if (_global.crypto && crypto.getRandomValues) {
-    var _rnds = new Uint32Array(4);
     whatwgRNG = function(size) {
-      var bytes = new Array(size);
-      crypto.getRandomValues(_rnds);
-
-      for (var c = 0 ; c < size; c++) {
-        bytes[c] = _rnds[c >> 2] >>> ((c & 0x03) * 8) & 0xff;
-      }
+      var bytes = new Buffer(size); //in browserify, this is an extended Uint8Array
+      crypto.getRandomValues(bytes);
       return bytes;
     }
   }
@@ -16492,536 +17338,11 @@ exports.bin_hmac_md5 = str_hmac_md5;
 
 }())
 
-},{}],163:[function(_dereq_,module,exports){
-/*
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
- * in FIPS PUB 180-1
- * Version 2.1a Copyright Paul Johnston 2000 - 2002.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- * Distributed under the BSD License
- * See http://pajhome.org.uk/crypt/md5 for details.
- */
-
-exports.hex_sha1 = hex_sha1;
-exports.b64_sha1 = b64_sha1;
-exports.str_sha1 = str_sha1;
-exports.hex_hmac_sha1 = hex_hmac_sha1;
-exports.b64_hmac_sha1 = b64_hmac_sha1;
-exports.str_hmac_sha1 = str_hmac_sha1;
-
-/*
- * Configurable variables. You may need to tweak these to be compatible with
- * the server-side, but the defaults work in most cases.
- */
-var hexcase = 0;   /* hex output format. 0 - lowercase; 1 - uppercase        */
-var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
-var chrsz   = 8;   /* bits per input character. 8 - ASCII; 16 - Unicode      */
-
-/*
- * These are the functions you'll usually want to call
- * They take string arguments and return either hex or base-64 encoded strings
- */
-function hex_sha1(s){return binb2hex(core_sha1(str2binb(s),s.length * chrsz));}
-function b64_sha1(s){return binb2b64(core_sha1(str2binb(s),s.length * chrsz));}
-function str_sha1(s){return binb2str(core_sha1(str2binb(s),s.length * chrsz));}
-function hex_hmac_sha1(key, data){ return binb2hex(core_hmac_sha1(key, data));}
-function b64_hmac_sha1(key, data){ return binb2b64(core_hmac_sha1(key, data));}
-function str_hmac_sha1(key, data){ return binb2str(core_hmac_sha1(key, data));}
-
-/*
- * Perform a simple self-test to see if the VM is working
- */
-function sha1_vm_test()
-{
-  return hex_sha1("abc") == "a9993e364706816aba3e25717850c26c9cd0d89d";
-}
-
-/*
- * Calculate the SHA-1 of an array of big-endian words, and a bit length
- */
-function core_sha1(x, len)
-{
-  /* append padding */
-  x[len >> 5] |= 0x80 << (24 - len % 32);
-  x[((len + 64 >> 9) << 4) + 15] = len;
-
-  var w = Array(80);
-  var a =  1732584193;
-  var b = -271733879;
-  var c = -1732584194;
-  var d =  271733878;
-  var e = -1009589776;
-
-  for(var i = 0; i < x.length; i += 16)
-  {
-    var olda = a;
-    var oldb = b;
-    var oldc = c;
-    var oldd = d;
-    var olde = e;
-
-    for(var j = 0; j < 80; j++)
-    {
-      if(j < 16) w[j] = x[i + j];
-      else w[j] = rol(w[j-3] ^ w[j-8] ^ w[j-14] ^ w[j-16], 1);
-      var t = safe_add(safe_add(rol(a, 5), sha1_ft(j, b, c, d)),
-                       safe_add(safe_add(e, w[j]), sha1_kt(j)));
-      e = d;
-      d = c;
-      c = rol(b, 30);
-      b = a;
-      a = t;
-    }
-
-    a = safe_add(a, olda);
-    b = safe_add(b, oldb);
-    c = safe_add(c, oldc);
-    d = safe_add(d, oldd);
-    e = safe_add(e, olde);
-  }
-  return Array(a, b, c, d, e);
-
-}
-
-/*
- * Perform the appropriate triplet combination function for the current
- * iteration
- */
-function sha1_ft(t, b, c, d)
-{
-  if(t < 20) return (b & c) | ((~b) & d);
-  if(t < 40) return b ^ c ^ d;
-  if(t < 60) return (b & c) | (b & d) | (c & d);
-  return b ^ c ^ d;
-}
-
-/*
- * Determine the appropriate additive constant for the current iteration
- */
-function sha1_kt(t)
-{
-  return (t < 20) ?  1518500249 : (t < 40) ?  1859775393 :
-         (t < 60) ? -1894007588 : -899497514;
-}
-
-/*
- * Calculate the HMAC-SHA1 of a key and some data
- */
-function core_hmac_sha1(key, data)
-{
-  var bkey = str2binb(key);
-  if(bkey.length > 16) bkey = core_sha1(bkey, key.length * chrsz);
-
-  var ipad = Array(16), opad = Array(16);
-  for(var i = 0; i < 16; i++)
-  {
-    ipad[i] = bkey[i] ^ 0x36363636;
-    opad[i] = bkey[i] ^ 0x5C5C5C5C;
-  }
-
-  var hash = core_sha1(ipad.concat(str2binb(data)), 512 + data.length * chrsz);
-  return core_sha1(opad.concat(hash), 512 + 160);
-}
-
-/*
- * Add integers, wrapping at 2^32. This uses 16-bit operations internally
- * to work around bugs in some JS interpreters.
- */
-function safe_add(x, y)
-{
-  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
-  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-  return (msw << 16) | (lsw & 0xFFFF);
-}
-
-/*
- * Bitwise rotate a 32-bit number to the left.
- */
-function rol(num, cnt)
-{
-  return (num << cnt) | (num >>> (32 - cnt));
-}
-
-/*
- * Convert an 8-bit or 16-bit string to an array of big-endian words
- * In 8-bit function, characters >255 have their hi-byte silently ignored.
- */
-function str2binb(str)
-{
-  var bin = Array();
-  var mask = (1 << chrsz) - 1;
-  for(var i = 0; i < str.length * chrsz; i += chrsz)
-    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (32 - chrsz - i%32);
-  return bin;
-}
-
-/*
- * Convert an array of big-endian words to a string
- */
-function binb2str(bin)
-{
-  var str = "";
-  var mask = (1 << chrsz) - 1;
-  for(var i = 0; i < bin.length * 32; i += chrsz)
-    str += String.fromCharCode((bin[i>>5] >>> (32 - chrsz - i%32)) & mask);
-  return str;
-}
-
-/*
- * Convert an array of big-endian words to a hex string.
- */
-function binb2hex(binarray)
-{
-  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
-  var str = "";
-  for(var i = 0; i < binarray.length * 4; i++)
-  {
-    str += hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8+4)) & 0xF) +
-           hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8  )) & 0xF);
-  }
-  return str;
-}
-
-/*
- * Convert an array of big-endian words to a base-64 string
- */
-function binb2b64(binarray)
-{
-  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  var str = "";
-  for(var i = 0; i < binarray.length * 4; i += 3)
-  {
-    var triplet = (((binarray[i   >> 2] >> 8 * (3 -  i   %4)) & 0xFF) << 16)
-                | (((binarray[i+1 >> 2] >> 8 * (3 - (i+1)%4)) & 0xFF) << 8 )
-                |  ((binarray[i+2 >> 2] >> 8 * (3 - (i+2)%4)) & 0xFF);
-    for(var j = 0; j < 4; j++)
-    {
-      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
-      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
-    }
-  }
-  return str;
-}
-
-
-},{}],164:[function(_dereq_,module,exports){
-
-/**
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
- * in FIPS 180-2
- * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- *
- */
-
-exports.hex_sha256 = hex_sha256;
-exports.b64_sha256 = b64_sha256;
-exports.str_sha256 = str_sha256;
-exports.hex_hmac_sha256 = hex_hmac_sha256;
-exports.b64_hmac_sha256 = b64_hmac_sha256;
-exports.str_hmac_sha256 = str_hmac_sha256;
-
-/*
- * Configurable variables. You may need to tweak these to be compatible with
- * the server-side, but the defaults work in most cases.
- */
-var hexcase = 0;   /* hex output format. 0 - lowercase; 1 - uppercase        */
-var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
-var chrsz   = 8;   /* bits per input character. 8 - ASCII; 16 - Unicode      */
-
-/*
- * These are the functions you'll usually want to call
- * They take string arguments and return either hex or base-64 encoded strings
- */
-function hex_sha256(s){return binb2hex(core_sha256(str2binb(s),s.length * chrsz));}
-function b64_sha256(s){return binb2b64(core_sha256(str2binb(s),s.length * chrsz));}
-function str_sha256(s){return binb2str(core_sha256(str2binb(s),s.length * chrsz));}
-function hex_hmac_sha256(key, data){ return binb2hex(core_hmac_sha256(key, data));}
-function b64_hmac_sha256(key, data){ return binb2b64(core_hmac_sha256(key, data));}
-function str_hmac_sha256(key, data){ return binb2str(core_hmac_sha256(key, data));}
-
-var safe_add = function(x, y) {
-  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
-  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-  return (msw << 16) | (lsw & 0xFFFF);
-};
-
-var S = function(X, n) {
-  return (X >>> n) | (X << (32 - n));
-};
-
-var R = function(X, n) {
-  return (X >>> n);
-};
-
-var Ch = function(x, y, z) {
-  return ((x & y) ^ ((~x) & z));
-};
-
-var Maj = function(x, y, z) {
-  return ((x & y) ^ (x & z) ^ (y & z));
-};
-
-var Sigma0256 = function(x) {
-  return (S(x, 2) ^ S(x, 13) ^ S(x, 22));
-};
-
-var Sigma1256 = function(x) {
-  return (S(x, 6) ^ S(x, 11) ^ S(x, 25));
-};
-
-var Gamma0256 = function(x) {
-  return (S(x, 7) ^ S(x, 18) ^ R(x, 3));
-};
-
-var Gamma1256 = function(x) {
-  return (S(x, 17) ^ S(x, 19) ^ R(x, 10));
-};
-
-var core_sha256 = function(m, l) {
-  var K = new Array(0x428A2F98,0x71374491,0xB5C0FBCF,0xE9B5DBA5,0x3956C25B,0x59F111F1,0x923F82A4,0xAB1C5ED5,0xD807AA98,0x12835B01,0x243185BE,0x550C7DC3,0x72BE5D74,0x80DEB1FE,0x9BDC06A7,0xC19BF174,0xE49B69C1,0xEFBE4786,0xFC19DC6,0x240CA1CC,0x2DE92C6F,0x4A7484AA,0x5CB0A9DC,0x76F988DA,0x983E5152,0xA831C66D,0xB00327C8,0xBF597FC7,0xC6E00BF3,0xD5A79147,0x6CA6351,0x14292967,0x27B70A85,0x2E1B2138,0x4D2C6DFC,0x53380D13,0x650A7354,0x766A0ABB,0x81C2C92E,0x92722C85,0xA2BFE8A1,0xA81A664B,0xC24B8B70,0xC76C51A3,0xD192E819,0xD6990624,0xF40E3585,0x106AA070,0x19A4C116,0x1E376C08,0x2748774C,0x34B0BCB5,0x391C0CB3,0x4ED8AA4A,0x5B9CCA4F,0x682E6FF3,0x748F82EE,0x78A5636F,0x84C87814,0x8CC70208,0x90BEFFFA,0xA4506CEB,0xBEF9A3F7,0xC67178F2);
-  var HASH = new Array(0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A, 0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19);
-    var W = new Array(64);
-    var a, b, c, d, e, f, g, h, i, j;
-    var T1, T2;
-  /* append padding */
-  m[l >> 5] |= 0x80 << (24 - l % 32);
-  m[((l + 64 >> 9) << 4) + 15] = l;
-  for (var i = 0; i < m.length; i += 16) {
-    a = HASH[0]; b = HASH[1]; c = HASH[2]; d = HASH[3]; e = HASH[4]; f = HASH[5]; g = HASH[6]; h = HASH[7];
-    for (var j = 0; j < 64; j++) {
-      if (j < 16) {
-        W[j] = m[j + i];
-      } else {
-        W[j] = safe_add(safe_add(safe_add(Gamma1256(W[j - 2]), W[j - 7]), Gamma0256(W[j - 15])), W[j - 16]);
-      }
-      T1 = safe_add(safe_add(safe_add(safe_add(h, Sigma1256(e)), Ch(e, f, g)), K[j]), W[j]);
-      T2 = safe_add(Sigma0256(a), Maj(a, b, c));
-      h = g; g = f; f = e; e = safe_add(d, T1); d = c; c = b; b = a; a = safe_add(T1, T2);
-    }
-    HASH[0] = safe_add(a, HASH[0]); HASH[1] = safe_add(b, HASH[1]); HASH[2] = safe_add(c, HASH[2]); HASH[3] = safe_add(d, HASH[3]);
-    HASH[4] = safe_add(e, HASH[4]); HASH[5] = safe_add(f, HASH[5]); HASH[6] = safe_add(g, HASH[6]); HASH[7] = safe_add(h, HASH[7]);
-  }
-  return HASH;
-};
-
-var str2binb = function(str) {
-  var bin = Array();
-  var mask = (1 << chrsz) - 1;
-  for (var i = 0; i < str.length * chrsz; i += chrsz) {
-    bin[i >> 5] |= (str.charCodeAt(i / chrsz) & mask) << (24 - i % 32);
-  }
-  return bin;
-};
-
-/*
- * Convert an array of big-endian words to a string
- */
-function binb2str(bin)
-{
-  var str = "";
-  var mask = (1 << chrsz) - 1;
-  for (var i = 0; i < bin.length * 32; i += chrsz)
-    str += String.fromCharCode((bin[i >> 5] >>> (32 - chrsz - i % 32)) & mask);
-  return str;
-}
-
-var hex2binb = function(a) {
-  var b = [], length = a.length, i, num;
-  for (i = 0; i < length; i += 2) {
-    num = parseInt(a.substr(i, 2), 16);
-    if (!isNaN(num)) {
-      b[i >> 3] |= num << (24 - (4 * (i % 8)));
-    } else {
-      return "INVALID HEX STRING";
-    }
-  }
-  return b;
-};
-
-var binb2hex = function(binarray) {
-  //var hexcase = 0; /* hex output format. 0 - lowercase; 1 - uppercase */
-  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
-  var str = "";
-  for (var i = 0; i < binarray.length * 4; i++) {
-    str += hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8+4)) & 0xF) + hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8  )) & 0xF);
-  }
-  return str;
-};
-
-var binb2b64 = function(a) {
-  var b = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" + "0123456789+/", str = "", length = a.length * 4, i, j, triplet;
-  var b64pad = "=";
-  for (i = 0; i < length; i += 3) {
-    triplet = (((a[i >> 2] >> 8 * (3 - i % 4)) & 0xFF) << 16) | (((a[i + 1 >> 2] >> 8 * (3 - (i + 1) % 4)) & 0xFF) << 8) | ((a[i + 2 >> 2] >> 8 * (3 - (i + 2) % 4)) & 0xFF);
-    for (j = 0; j < 4; j += 1) {
-      if (i * 8 + j * 6 <= a.length * 32) {
-        str += b.charAt((triplet >> 6 * (3 - j)) & 0x3F);
-      } else {
-        str += b64pad;
-      }
-    }
-}
-  return str;
-};
-
-var core_hmac_sha256 = function(key, data) {
-  var bkey = str2binb(key);
-  if (bkey.length > 16) {
-    bkey = core_sha256(bkey, key.length * chrsz);
-  }
-  var ipad = Array(16), opad = Array(16);
-  for (var i = 0; i < 16; i++) {
-    ipad[i] = bkey[i] ^ 0x36363636;
-    opad[i] = bkey[i] ^ 0x5C5C5C5C;
-  }
-  var hash = core_sha256(ipad.concat(str2binb(data)), 512 + data.length * chrsz);
-  return core_sha256(opad.concat(hash), 512 + 256);
-};
-
-
-},{}],165:[function(_dereq_,module,exports){
-'use strict';
-
-var _ = _dereq_('underscore');
-var Promise = _dereq_('bluebird');
-var request = Promise.promisify(_dereq_('request'));
-
-var jxt = _dereq_('jxt');
-var XRD = _dereq_('./lib/xrd');
-
-
-module.exports = function (opts, cb) {
-    if (typeof opts === 'string') {
-        opts = {host: opts};
-    }
-    opts = _.extend({
-        ssl: true,
-        json: true,
-        xrd: true
-    }, opts);
-
-    var scheme = opts.ssl ? 'https://' : 'http://';
-
-    var getJSON = new Promise(function (resolve, reject) {
-        request(scheme + opts.host + '/.well-known/host-meta.json').spread(function (req, body) {
-            resolve(JSON.parse(body));
-        }).catch(reject);
-    });
-
-    var getXRD = new Promise(function (resolve, reject) {
-        request(scheme + opts.host + '/.well-known/host-meta').spread(function (req, body) {
-            var xrd = jxt.parse(body, XRD);
-            resolve(xrd.toJSON());
-        }).catch(reject);
-    });
-
-
-    return new Promise(function (resolve, reject) {
-        Promise.some([getJSON, getXRD], 1).spread(resolve).catch(function () {
-            reject('no-host-meta');
-        });
-    }).nodeify(cb);
-};
-
-},{"./lib/xrd":166,"bluebird":109,"jxt":187,"request":144,"underscore":208}],166:[function(_dereq_,module,exports){
-'use strict';
-
-var _ = _dereq_('underscore');
-var jxt = _dereq_('jxt');
-
-
-var NS = 'http://docs.oasis-open.org/ns/xri/xrd-1.0';
-
-var Properties = {
-    get: function () {
-        var results = {};
-        var props = jxt.find(this.xml, NS, 'Property');
-        _.each(props, function (property) {
-            var type = jxt.getAttribute(property, 'type');
-            results[type] = property.textContent;
-        });
-        return results;
-    }
-};
-
-var XRD = module.exports = jxt.define({
-    name: 'xrd',
-    namespace: NS,
-    element: 'XRD',
-    fields: {
-        subject: jxt.subText(NS, 'Subject'),
-        expires: jxt.dateSub(NS, 'Expires'),
-        aliases: jxt.multiSubText(NS, 'Alias'),
-        properties: Properties
-    }
-});
-
-
-var Link = jxt.define({
-    name: 'xrdlink',
-    namespace: NS,
-    element: 'Link',
-    fields: {
-        rel: jxt.attribute('rel'),
-        href: jxt.attribute('href'),
-        type: jxt.attribute('type'),
-        template: jxt.attribute('template'),
-        titles: jxt.subLangText(NS, 'Title', 'default'),
-        properties: Properties
-    }
-});
-
-
-jxt.extend(XRD, Link, 'links');
-
-},{"jxt":187,"underscore":208}],167:[function(_dereq_,module,exports){
-var crypto = _dereq_('crypto');
-
-var mapping = {
-    md2: 'md2',
-    md5: 'md5',
-    'sha-1': 'sha1',
-    'sha-224': 'sha224',
-    'sha-256': 'sha256',
-    'sha-384': 'sha384',
-    'sha-512': 'sha512'
-};
-
-var names = Object.keys(mapping);
-
-
-exports.getHashes = function () {
-    var result = [];
-    var available = crypto.getHashes();
-    for (var i = 0, len = names.length; i < len; i++) {
-        if (available.indexOf(mapping[names[i]]) >= 0) {
-            result.push(names[i]);
-        }
-    }
-    return result;
-};
-
-exports.createHash = function (algorithm) {
-    algorithm = algorithm.toLowerCase();
-    if (mapping[algorithm]) {
-        algorithm = mapping[algorithm];
-    }
-    return crypto.createHash(algorithm);
-};
-
-exports.createHmac = function (algorithm, key) {
-    algorithm = algorithm.toLowerCase();
-    if (mapping[algorithm]) {
-        algorithm = mapping[algorithm];
-    }
-    return crypto.createHmac(algorithm, key);
-};
-
-},{"crypto":160}],168:[function(_dereq_,module,exports){
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":146}],176:[function(_dereq_,module,exports){
 module.exports = _dereq_('./lib/sessionManager');
 
-},{"./lib/sessionManager":172}],169:[function(_dereq_,module,exports){
+},{"./lib/sessionManager":180}],177:[function(_dereq_,module,exports){
 var _ = _dereq_('underscore');
 var util = _dereq_('util');
 var bows = _dereq_('bows');
@@ -17249,7 +17570,7 @@ FileSession.prototype = _.extend(FileSession.prototype, {
 
 module.exports = FileSession;
 
-},{"./genericSession":170,"bows":173,"filetransfer":175,"rtcpeerconnection":181,"underscore":208,"util":158}],170:[function(_dereq_,module,exports){
+},{"./genericSession":178,"bows":181,"filetransfer":183,"rtcpeerconnection":189,"underscore":218,"util":158}],178:[function(_dereq_,module,exports){
 var bows = _dereq_('bows');
 var async = _dereq_('async');
 var WildEmitter = _dereq_('wildemitter');
@@ -17401,7 +17722,7 @@ actions.forEach(function (action) {
 
 module.exports = JingleSession;
 
-},{"async":105,"bows":173,"wildemitter":210}],171:[function(_dereq_,module,exports){
+},{"async":105,"bows":181,"wildemitter":220}],179:[function(_dereq_,module,exports){
 var _ = _dereq_('underscore');
 var util = _dereq_('util');
 var bows = _dereq_('bows');
@@ -17635,7 +17956,7 @@ MediaSession.prototype = _.extend(MediaSession.prototype, {
 
 module.exports = MediaSession;
 
-},{"./genericSession":170,"bows":173,"rtcpeerconnection":181,"underscore":208,"util":158}],172:[function(_dereq_,module,exports){
+},{"./genericSession":178,"bows":181,"rtcpeerconnection":189,"underscore":218,"util":158}],180:[function(_dereq_,module,exports){
 var _ = _dereq_('underscore');
 var bows = _dereq_('bows');
 var hark = _dereq_('hark');
@@ -18022,7 +18343,7 @@ Jingle.prototype.endAllPeerSessions = function () {
 
 module.exports = Jingle;
 
-},{"./fileSession":169,"./genericSession":170,"./mediaSession":171,"bows":173,"getusermedia":177,"hark":178,"mediastream-gain":179,"underscore":208,"webrtcsupport":186,"wildemitter":210}],173:[function(_dereq_,module,exports){
+},{"./fileSession":177,"./genericSession":178,"./mediaSession":179,"bows":181,"getusermedia":185,"hark":186,"mediastream-gain":187,"underscore":218,"webrtcsupport":194,"wildemitter":220}],181:[function(_dereq_,module,exports){
 (function() {
   function checkColorSupport() {
     var chrome = !!window.chrome,
@@ -18092,7 +18413,7 @@ module.exports = Jingle;
   }
 }).call();
 
-},{"andlog":174}],174:[function(_dereq_,module,exports){
+},{"andlog":182}],182:[function(_dereq_,module,exports){
 // follow @HenrikJoreteg and @andyet if you like this ;)
 (function () {
     var inNode = typeof window === 'undefined',
@@ -18123,7 +18444,7 @@ module.exports = Jingle;
     }
 })();
 
-},{}],175:[function(_dereq_,module,exports){
+},{}],183:[function(_dereq_,module,exports){
 var async = _dereq_('async');
 //var webrtcsupport = require('webrtcsupport');
 var WildEmitter = _dereq_('wildemitter');
@@ -18251,7 +18572,7 @@ module.exports.support = window && window.File && window.FileReader && window.Bl
 module.exports.Sender = Sender;
 module.exports.Receiver = Receiver;
 
-},{"async":176,"iana-hashes":167,"util":158,"wildemitter":210}],176:[function(_dereq_,module,exports){
+},{"async":184,"iana-hashes":162,"util":158,"wildemitter":220}],184:[function(_dereq_,module,exports){
 (function (process){
 /*!
  * async
@@ -19313,7 +19634,7 @@ module.exports.Receiver = Receiver;
 }());
 
 }).call(this,_dereq_("FWaASH"))
-},{"FWaASH":156}],177:[function(_dereq_,module,exports){
+},{"FWaASH":156}],185:[function(_dereq_,module,exports){
 // getUserMedia helper by @HenrikJoreteg
 var func = (window.navigator.getUserMedia ||
             window.navigator.webkitGetUserMedia ||
@@ -19377,7 +19698,7 @@ module.exports = function (constraints, cb) {
     });
 };
 
-},{}],178:[function(_dereq_,module,exports){
+},{}],186:[function(_dereq_,module,exports){
 var WildEmitter = _dereq_('wildemitter');
 
 function getMaxVolume (analyser, fftBins) {
@@ -19507,7 +19828,7 @@ module.exports = function(stream, options) {
   return harker;
 }
 
-},{"wildemitter":210}],179:[function(_dereq_,module,exports){
+},{"wildemitter":220}],187:[function(_dereq_,module,exports){
 var support = _dereq_('webrtcsupport');
 
 
@@ -19554,7 +19875,7 @@ GainController.prototype.on = function () {
 
 module.exports = GainController;
 
-},{"webrtcsupport":186}],180:[function(_dereq_,module,exports){
+},{"webrtcsupport":194}],188:[function(_dereq_,module,exports){
 // based on https://github.com/ESTOS/strophe.jingle/
 // adds wildemitter support
 var util = _dereq_('util');
@@ -19774,7 +20095,7 @@ TraceablePeerConnection.prototype.getStats = function (callback, errback) {
 
 module.exports = TraceablePeerConnection;
 
-},{"util":158,"webrtcsupport":186,"wildemitter":210}],181:[function(_dereq_,module,exports){
+},{"util":158,"webrtcsupport":194,"wildemitter":220}],189:[function(_dereq_,module,exports){
 var _ = _dereq_('underscore');
 var util = _dereq_('util');
 var webrtc = _dereq_('webrtcsupport');
@@ -20106,6 +20427,9 @@ PeerConnection.prototype._onIce = function (event) {
         };
 
         if (self.config.useJingle) {
+            if (!ice.sdpMid) { // firefox doesn't set this
+                ice.sdpMid = self.localDescription.contents[ice.sdpMLineIndex].name;
+            }
             if (!self.config.ice[ice.sdpMid]) {
                 var jingle = SJJ.toSessionJSON(self.pc.localDescription.sdp, self.config.isInitiator ? 'initiator' : 'responder');
                 _.each(jingle.contents, function (content) {
@@ -20198,7 +20522,7 @@ PeerConnection.prototype.getStats = function (cb) {
 
 module.exports = PeerConnection;
 
-},{"sdp-jingle-json":182,"traceablepeerconnection":180,"underscore":208,"util":158,"webrtcsupport":186,"wildemitter":210}],182:[function(_dereq_,module,exports){
+},{"sdp-jingle-json":190,"traceablepeerconnection":188,"underscore":218,"util":158,"webrtcsupport":194,"wildemitter":220}],190:[function(_dereq_,module,exports){
 var tosdp = _dereq_('./lib/tosdp');
 var tojson = _dereq_('./lib/tojson');
 
@@ -20211,7 +20535,7 @@ exports.toSessionJSON = tojson.toSessionJSON;
 exports.toMediaJSON = tojson.toMediaJSON;
 exports.toCandidateJSON = tojson.toCandidateJSON;
 
-},{"./lib/tojson":184,"./lib/tosdp":185}],183:[function(_dereq_,module,exports){
+},{"./lib/tojson":192,"./lib/tosdp":193}],191:[function(_dereq_,module,exports){
 exports.lines = function (sdp) {
     return sdp.split('\r\n').filter(function (line) {
         return line.length > 0;
@@ -20462,7 +20786,7 @@ exports.groups = function (lines) {
     return parsed;
 };
 
-},{}],184:[function(_dereq_,module,exports){
+},{}],192:[function(_dereq_,module,exports){
 var parsers = _dereq_('./parsers');
 var idCounter = Math.random();
 
@@ -20647,7 +20971,7 @@ exports.toCandidateJSON = function (line) {
     return candidate;
 };
 
-},{"./parsers":183}],185:[function(_dereq_,module,exports){
+},{"./parsers":191}],193:[function(_dereq_,module,exports){
 var senders = {
     'initiator': 'sendonly',
     'responder': 'recvonly',
@@ -20849,7 +21173,7 @@ exports.toCandidateSDP = function (candidate) {
     return 'a=candidate:' + sdp.join(' ');
 };
 
-},{}],186:[function(_dereq_,module,exports){
+},{}],194:[function(_dereq_,module,exports){
 // created by @HenrikJoreteg
 var prefix;
 var isChrome = false;
@@ -20887,7 +21211,7 @@ module.exports = {
     IceCandidate: IceCandidate
 };
 
-},{}],187:[function(_dereq_,module,exports){
+},{}],195:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -20897,7 +21221,7 @@ var types = _dereq_('./lib/types');
 
 module.exports = _.extend({}, core, helpers, types);
 
-},{"./lib/core":188,"./lib/helpers":189,"./lib/types":190,"underscore":194}],188:[function(_dereq_,module,exports){
+},{"./lib/core":196,"./lib/helpers":197,"./lib/types":198,"underscore":218}],196:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -21091,7 +21415,7 @@ exports.define = function (opts) {
     return StanzaConstructor;
 };
 
-},{"./helpers":189,"./types":190,"ltx-dom-shim":193,"underscore":194}],189:[function(_dereq_,module,exports){
+},{"./helpers":197,"./types":198,"ltx-dom-shim":199,"underscore":218}],197:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -21099,15 +21423,10 @@ var xmlshim = _dereq_('ltx-dom-shim');
 
 var XML_NS = exports.XML_NS = 'http://www.w3.org/XML/1998/namespace';
 
-// Test for browser inconsistencies where the serializer does not properly
-// include an xmlns attribute.
-var xmlnsTest = xmlshim.serializeToString(xmlshim.createElementNS('testns', 't'));
-var INSERT_XMLNS = xmlnsTest.split('xmlns').length !== 2;
-
 
 exports.createElement = function (NS, name, parentNS) {
     var el = xmlshim.createElementNS(NS, name);
-    if (INSERT_XMLNS && (!parentNS || parentNS !== NS)) {
+    if (!parentNS || parentNS !== NS) {
         exports.setAttribute(el, 'xmlns', NS);
     }
     return el;
@@ -21370,7 +21689,7 @@ exports.setBoolSub = function (xml, NS, element, value) {
     }
 };
 
-},{"ltx-dom-shim":193,"underscore":194}],190:[function(_dereq_,module,exports){
+},{"ltx-dom-shim":199,"underscore":218}],198:[function(_dereq_,module,exports){
 'use strict';
 
 var _ = _dereq_('underscore');
@@ -21627,11 +21946,7 @@ exports.multiExtension = function (ChildJXT) {
     };
 };
 
-},{"./helpers":189,"atob":191,"btoa":192,"underscore":194}],191:[function(_dereq_,module,exports){
-module.exports=_dereq_(106)
-},{"buffer":146}],192:[function(_dereq_,module,exports){
-module.exports=_dereq_(159)
-},{"buffer":146}],193:[function(_dereq_,module,exports){
+},{"./helpers":197,"atob":106,"btoa":159,"underscore":218}],199:[function(_dereq_,module,exports){
 var parser = new window.DOMParser();
 var serializer = new window.XMLSerializer();
 
@@ -21647,7 +21962,1825 @@ module.exports = {
     }
 };
 
-},{}],194:[function(_dereq_,module,exports){
+},{}],200:[function(_dereq_,module,exports){
+(function (Buffer){
+//     uuid.js
+//
+//     Copyright (c) 2010-2012 Robert Kieffer
+//     MIT License - http://opensource.org/licenses/mit-license.php
+
+(function() {
+  var _global = this;
+
+  // Unique ID creation requires a high quality random # generator.  We feature
+  // detect to determine the best RNG source, normalizing to a function that
+  // returns 128-bits of randomness, since that's what's usually required
+  var _rng;
+
+  // Node.js crypto-based RNG - http://nodejs.org/docs/v0.6.2/api/crypto.html
+  //
+  // Moderately fast, high quality
+  if (typeof(_dereq_) == 'function') {
+    try {
+      var _rb = _dereq_('crypto').randomBytes;
+      _rng = _rb && function() {return _rb(16);};
+    } catch(e) {}
+  }
+
+  if (!_rng && _global.crypto && crypto.getRandomValues) {
+    // WHATWG crypto-based RNG - http://wiki.whatwg.org/wiki/Crypto
+    //
+    // Moderately fast, high quality
+    var _rnds8 = new Uint8Array(16);
+    _rng = function whatwgRNG() {
+      crypto.getRandomValues(_rnds8);
+      return _rnds8;
+    };
+  }
+
+  if (!_rng) {
+    // Math.random()-based (RNG)
+    //
+    // If all else fails, use Math.random().  It's fast, but is of unspecified
+    // quality.
+    var  _rnds = new Array(16);
+    _rng = function() {
+      for (var i = 0, r; i < 16; i++) {
+        if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+        _rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+      }
+
+      return _rnds;
+    };
+  }
+
+  // Buffer class to use
+  var BufferClass = typeof(Buffer) == 'function' ? Buffer : Array;
+
+  // Maps for number <-> hex string conversion
+  var _byteToHex = [];
+  var _hexToByte = {};
+  for (var i = 0; i < 256; i++) {
+    _byteToHex[i] = (i + 0x100).toString(16).substr(1);
+    _hexToByte[_byteToHex[i]] = i;
+  }
+
+  // **`parse()` - Parse a UUID into it's component bytes**
+  function parse(s, buf, offset) {
+    var i = (buf && offset) || 0, ii = 0;
+
+    buf = buf || [];
+    s.toLowerCase().replace(/[0-9a-f]{2}/g, function(oct) {
+      if (ii < 16) { // Don't overflow!
+        buf[i + ii++] = _hexToByte[oct];
+      }
+    });
+
+    // Zero out remaining bytes if string was short
+    while (ii < 16) {
+      buf[i + ii++] = 0;
+    }
+
+    return buf;
+  }
+
+  // **`unparse()` - Convert UUID byte array (ala parse()) into a string**
+  function unparse(buf, offset) {
+    var i = offset || 0, bth = _byteToHex;
+    return  bth[buf[i++]] + bth[buf[i++]] +
+            bth[buf[i++]] + bth[buf[i++]] + '-' +
+            bth[buf[i++]] + bth[buf[i++]] + '-' +
+            bth[buf[i++]] + bth[buf[i++]] + '-' +
+            bth[buf[i++]] + bth[buf[i++]] + '-' +
+            bth[buf[i++]] + bth[buf[i++]] +
+            bth[buf[i++]] + bth[buf[i++]] +
+            bth[buf[i++]] + bth[buf[i++]];
+  }
+
+  // **`v1()` - Generate time-based UUID**
+  //
+  // Inspired by https://github.com/LiosK/UUID.js
+  // and http://docs.python.org/library/uuid.html
+
+  // random #'s we need to init node and clockseq
+  var _seedBytes = _rng();
+
+  // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+  var _nodeId = [
+    _seedBytes[0] | 0x01,
+    _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
+  ];
+
+  // Per 4.2.2, randomize (14 bit) clockseq
+  var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
+
+  // Previous uuid creation time
+  var _lastMSecs = 0, _lastNSecs = 0;
+
+  // See https://github.com/broofa/node-uuid for API details
+  function v1(options, buf, offset) {
+    var i = buf && offset || 0;
+    var b = buf || [];
+
+    options = options || {};
+
+    var clockseq = options.clockseq != null ? options.clockseq : _clockseq;
+
+    // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+    // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+    // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+    // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+    var msecs = options.msecs != null ? options.msecs : new Date().getTime();
+
+    // Per 4.2.1.2, use count of uuid's generated during the current clock
+    // cycle to simulate higher resolution clock
+    var nsecs = options.nsecs != null ? options.nsecs : _lastNSecs + 1;
+
+    // Time since last uuid creation (in msecs)
+    var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
+
+    // Per 4.2.1.2, Bump clockseq on clock regression
+    if (dt < 0 && options.clockseq == null) {
+      clockseq = clockseq + 1 & 0x3fff;
+    }
+
+    // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+    // time interval
+    if ((dt < 0 || msecs > _lastMSecs) && options.nsecs == null) {
+      nsecs = 0;
+    }
+
+    // Per 4.2.1.2 Throw error if too many uuids are requested
+    if (nsecs >= 10000) {
+      throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
+    }
+
+    _lastMSecs = msecs;
+    _lastNSecs = nsecs;
+    _clockseq = clockseq;
+
+    // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+    msecs += 12219292800000;
+
+    // `time_low`
+    var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+    b[i++] = tl >>> 24 & 0xff;
+    b[i++] = tl >>> 16 & 0xff;
+    b[i++] = tl >>> 8 & 0xff;
+    b[i++] = tl & 0xff;
+
+    // `time_mid`
+    var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
+    b[i++] = tmh >>> 8 & 0xff;
+    b[i++] = tmh & 0xff;
+
+    // `time_high_and_version`
+    b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+    b[i++] = tmh >>> 16 & 0xff;
+
+    // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+    b[i++] = clockseq >>> 8 | 0x80;
+
+    // `clock_seq_low`
+    b[i++] = clockseq & 0xff;
+
+    // `node`
+    var node = options.node || _nodeId;
+    for (var n = 0; n < 6; n++) {
+      b[i + n] = node[n];
+    }
+
+    return buf ? buf : unparse(b);
+  }
+
+  // **`v4()` - Generate random UUID**
+
+  // See https://github.com/broofa/node-uuid for API details
+  function v4(options, buf, offset) {
+    // Deprecated - 'format' argument, as supported in v1.2
+    var i = buf && offset || 0;
+
+    if (typeof(options) == 'string') {
+      buf = options == 'binary' ? new BufferClass(16) : null;
+      options = null;
+    }
+    options = options || {};
+
+    var rnds = options.random || (options.rng || _rng)();
+
+    // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+    rnds[6] = (rnds[6] & 0x0f) | 0x40;
+    rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+    // Copy bytes to buffer, if provided
+    if (buf) {
+      for (var ii = 0; ii < 16; ii++) {
+        buf[i + ii] = rnds[ii];
+      }
+    }
+
+    return buf || unparse(rnds);
+  }
+
+  // Export public API
+  var uuid = v4;
+  uuid.v1 = v1;
+  uuid.v4 = v4;
+  uuid.parse = parse;
+  uuid.unparse = unparse;
+  uuid.BufferClass = BufferClass;
+
+  if (typeof define === 'function' && define.amd) {
+    // Publish as AMD module
+    define(function() {return uuid;});
+  } else if (typeof(module) != 'undefined' && module.exports) {
+    // Publish as node.js module
+    module.exports = uuid;
+  } else {
+    // Publish as global (in browsers)
+    var _previousRoot = _global.uuid;
+
+    // **`noConflict()` - (browser only) to reset global 'uuid' var**
+    uuid.noConflict = function() {
+      _global.uuid = _previousRoot;
+      return uuid;
+    };
+
+    _global.uuid = uuid;
+  }
+}).call(this);
+
+}).call(this,_dereq_("buffer").Buffer)
+},{"buffer":146,"crypto":150}],201:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports, module);
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports', 'module'], factory);
+  }
+}(this, function(exports, module) {
+
+  /**
+   * ANONYMOUS `Mechanism` constructor.
+   *
+   * This class implements the ANONYMOUS SASL mechanism.
+   *
+   * The ANONYMOUS SASL mechanism provides support for permitting anonymous
+   * access to various services
+   *
+   * References:
+   *  - [RFC 4505](http://tools.ietf.org/html/rfc4505)
+   *
+   * @api public
+   */
+  function Mechanism() {
+  }
+  
+  Mechanism.prototype.name = 'ANONYMOUS';
+  Mechanism.prototype.clientFirst = true;
+  
+  /**
+   * Encode a response using optional trace information.
+   *
+   * Options:
+   *  - `trace`  trace information (optional)
+   *
+   * @param {Object} cred
+   * @api public
+   */
+  Mechanism.prototype.response = function(cred) {
+    return cred.trace || '';
+  };
+  
+  /**
+   * Decode a challenge issued by the server.
+   *
+   * @param {String} chal
+   * @api public
+   */
+  Mechanism.prototype.challenge = function(chal) {
+  };
+
+  exports = module.exports = Mechanism;
+  
+}));
+
+},{}],202:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports,
+            module,
+            _dereq_('./lib/mechanism'));
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports',
+            'module',
+            './lib/mechanism'], factory);
+  }
+}(this, function(exports, module, Mechanism) {
+
+  exports = module.exports = Mechanism;
+  exports.Mechanism = Mechanism;
+  
+}));
+
+},{"./lib/mechanism":201}],203:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports, module, _dereq_('crypto'));
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports', 'module', 'crypto'], factory);
+  }
+}(this, function(exports, module, crypto) {
+  
+  /**
+   * DIGEST-MD5 `Mechanism` constructor.
+   *
+   * This class implements the DIGEST-MD5 SASL mechanism.
+   *
+   * References:
+   *  - [RFC 2831](http://tools.ietf.org/html/rfc2831)
+   *
+   * @api public
+   */
+  function Mechanism(options) {
+    options = options || {};
+    this._genNonce = options.genNonce || genNonce(32);
+  }
+  
+  Mechanism.prototype.name = 'DIGEST-MD5';
+  Mechanism.prototype.clientFirst = false;
+  
+  /**
+   * Encode a response using given credential.
+   *
+   * Options:
+   *  - `username`
+   *  - `password`
+   *  - `host`
+   *  - `serviceType`
+   *  - `authzid`   authorization identity (optional)
+   *
+   * @param {Object} cred
+   * @api public
+   */
+  Mechanism.prototype.response = function(cred) {
+    // TODO: Implement support for subsequent authentication.  This requires
+    //       that the client be able to store username, realm, nonce,
+    //       nonce-count, cnonce, and qop values from prior authentication.
+    //       The impact of this requirement needs to be investigated.
+    //
+    //       See RFC 2831 (Section 2.2) for further details.
+    
+    // TODO: Implement support for auth-int and auth-conf, as defined in RFC
+    //       2831 sections 2.3 Integrity Protection and 2.4 Confidentiality
+    //       Protection, respectively.
+    //
+    //       Note that supporting this functionality has implications
+    //       regarding the negotiation of security layers via SASL.  Due to
+    //       the fact that TLS has largely superseded this functionality,
+    //       implementing it is a low priority.
+  
+    var uri = cred.serviceType + '/' + cred.host;
+    if (cred.serviceName && cred.host !== cred.serviceName) {
+      uri += '/' + serviceName;
+    }
+    var realm = cred.realm || this._realm || ''
+      , cnonce = this._genNonce()
+      , nc = '00000001'
+      , qop = 'auth'
+      , ha1
+      , ha2
+      , digest;
+  
+    var str = '';
+    str += 'username="' + cred.username + '"';
+    if (realm) { str += ',realm="' + realm + '"'; };
+    str += ',nonce="' + this._nonce + '"';
+    str += ',cnonce="' + cnonce + '"';
+    str += ',nc=' + nc;
+    str += ',qop=' + qop;
+    str += ',digest-uri="' + uri + '"';
+    
+    if (cred.authzid) {
+      ha1 = md5(md5(cred.username + ":" + realm + ":" + cred.password, 'binary') + ":" + this._nonce + ":" + cnonce + ":" + cred.authzid);
+    } else {
+      ha1 = md5(md5(cred.username + ":" + realm + ":" + cred.password, 'binary') + ":" + this._nonce + ":" + cnonce);
+    }
+    
+    if (qop == 'auth') {
+      ha2 = md5('AUTHENTICATE:' + uri);
+    } else if (qop == 'auth-int' || qop == 'auth-conf') {
+      ha2 = md5('AUTHENTICATE:' + uri + ':00000000000000000000000000000000');
+    }
+    
+    digest = md5(ha1 + ":" + this._nonce + ":" + nc + ":" + cnonce + ":" + qop + ":" + ha2);
+    str += ',response=' + digest;
+    
+    if (this._charset == 'utf-8') { str += ',charset=utf-8'; }
+    if (cred.authzid) { str += 'authzid="' + cred.authzid + '"'; }
+    
+    return str;
+  };
+  
+  /**
+   * Decode a challenge issued by the server.
+   *
+   * @param {String} chal
+   * @return {Mechanism} for chaining
+   * @api public
+   */
+  Mechanism.prototype.challenge = function(chal) {
+    var dtives = parse(chal);
+    
+    // TODO: Implement support for multiple realm directives, as allowed by the
+    //       DIGEST-MD5 specification.
+    this._realm = dtives['realm'];
+    this._nonce = dtives['nonce'];
+    this._qop = (dtives['qop'] || 'auth').split(',');
+    this._stale = dtives['stale'];
+    this._maxbuf = parseInt(dtives['maxbuf']) || 65536;
+    this._charset = dtives['charset'];
+    this._algo = dtives['algorithm'];
+    this._cipher = dtives['cipher'];
+    if (this._cipher) { this._cipher.split(','); }
+    return this;
+  };
+  
+  
+  /**
+   * Parse challenge.
+   *
+   * @api private
+   */
+  function parse(chal) {
+    var dtives = {};
+    var tokens = chal.split(/,(?=(?:[^"]|"[^"]*")*$)/);
+    for (var i = 0, len = tokens.length; i < len; i++) {
+      var dtiv = /(\w+)=["]?([^"]+)["]?$/.exec(tokens[i]);
+      if (dtiv) {
+        dtives[dtiv[1]] = dtiv[2];
+      }
+    }
+    return dtives;
+  }
+  
+  /**
+   * Return a unique nonce with the given `len`.
+   *
+   *     genNonce(10)();
+   *     // => "FDaS435D2z"
+   *
+   * @param {Number} len
+   * @return {Function}
+   * @api private
+   */
+  function genNonce(len) {
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      , charlen = chars.length;
+  
+    return function() {
+      var buf = [];
+      for (var i = 0; i < len; ++i) {
+        buf.push(chars[Math.random() * charlen | 0]);
+      }
+      return buf.join('');
+    }
+  }
+  
+  /**
+   * Return md5 hash of the given string and optional encoding,
+   * defaulting to hex.
+   *
+   *     md5('wahoo');
+   *     // => "e493298061761236c96b02ea6aa8a2ad"
+   *
+   * @param {String} str
+   * @param {String} encoding
+   * @return {String}
+   * @api private
+   */
+  function md5(str, encoding){
+    return crypto
+      .createHash('md5')
+      .update(str)
+      .digest(encoding || 'hex');
+  }
+
+
+  exports = module.exports = Mechanism;
+  
+}));
+
+},{"crypto":150}],204:[function(_dereq_,module,exports){
+arguments[4][202][0].apply(exports,arguments)
+},{"./lib/mechanism":203}],205:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports, module);
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports', 'module'], factory);
+  }
+}(this, function(exports, module) {
+
+  /**
+   * EXTERNAL `Mechanism` constructor.
+   *
+   * This class implements the EXTERNAL SASL mechanism.
+   *
+   * The EXTERNAL SASL mechanism provides support for authentication using
+   * credentials established by external means. 
+   *
+   * References:
+   *  - [RFC 4422](http://tools.ietf.org/html/rfc4422)
+   *
+   * @api public
+   */
+  function Mechanism() {
+  }
+  
+  Mechanism.prototype.name = 'EXTERNAL';
+  Mechanism.prototype.clientFirst = true;
+  
+  /**
+   * Encode a response using given credential.
+   *
+   * Options:
+   *  - `authzid`   authorization identity (optional)
+   *
+   * @param {Object} cred
+   * @api public
+   */
+  Mechanism.prototype.response = function(cred) {
+    return cred.authzid || '';
+  };
+  
+  /**
+   * Decode a challenge issued by the server.
+   *
+   * @param {String} chal
+   * @api public
+   */
+  Mechanism.prototype.challenge = function(chal) {
+  };
+
+  exports = module.exports = Mechanism;
+  
+}));
+
+},{}],206:[function(_dereq_,module,exports){
+arguments[4][202][0].apply(exports,arguments)
+},{"./lib/mechanism":205}],207:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports, module);
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports', 'module'], factory);
+  }
+}(this, function(exports, module) {
+
+  /**
+   * PLAIN `Mechanism` constructor.
+   *
+   * This class implements the PLAIN SASL mechanism.
+   *
+   * The PLAIN SASL mechanism provides support for exchanging a clear-text
+   * username and password.  This mechanism should not be used without adequate
+   * security provided by an underlying transport layer. 
+   *
+   * References:
+   *  - [RFC 4616](http://tools.ietf.org/html/rfc4616)
+   *
+   * @api public
+   */
+  function Mechanism() {
+  }
+  
+  Mechanism.prototype.name = 'PLAIN';
+  Mechanism.prototype.clientFirst = true;
+  
+  /**
+   * Encode a response using given credential.
+   *
+   * Options:
+   *  - `username`
+   *  - `password`
+   *  - `authzid`   authorization identity (optional)
+   *
+   * @param {Object} cred
+   * @api public
+   */
+  Mechanism.prototype.response = function(cred) {
+    var str = '';
+    str += cred.authzid || '';
+    str += '\0';
+    str += cred.username;
+    str += '\0';
+    str += cred.password;
+    return str;
+  };
+  
+  /**
+   * Decode a challenge issued by the server.
+   *
+   * @param {String} chal
+   * @return {Mechanism} for chaining
+   * @api public
+   */
+  Mechanism.prototype.challenge = function(chal) {
+    return this;
+  };
+
+  exports = module.exports = Mechanism;
+  
+}));
+
+},{}],208:[function(_dereq_,module,exports){
+arguments[4][202][0].apply(exports,arguments)
+},{"./lib/mechanism":207}],209:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports, module, _dereq_('crypto'), _dereq_('buffer'));
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports', 'module', 'crypto', 'buffer'], factory);
+  }
+}(this, function(exports, module, crypto, buffer) {
+
+    var Buffer = buffer.Buffer;
+ 
+    /**
+     * SCRAM-SHA-1 `Mechanism` constructor.
+     *
+     * This class implements the SCRAM-SHA-1 SASL mechanism.
+     *
+     * References:
+     *  - [RFC 5802](http://tools.ietf.org/html/rfc5802)
+     *
+     * @api public
+     */
+    function Mechanism(options) {
+        options = options || {};
+        this._genNonce = options.genNonce || genNonce(32);
+        this._stage = 0;
+    }
+
+    Mechanism.prototype.name = 'SCRAM-SHA-1';
+    Mechanism.prototype.clientFirst = true;
+
+    /**
+     * Encode a response using given credentials.
+     *
+     * Options:
+     *  - `username`
+     *  - `password`
+     *  - `authzid`
+     *
+     * @param {object} cred
+     * @api public
+     */
+    Mechanism.prototype.response = function (cred) {
+        return responses[this._stage](this, cred); 
+    };
+
+    /**
+     * Decode a challenge issued by the server.
+     *
+     * @param {String} chal
+     * @return {Mechanism} for chaining
+     * @api public
+     */
+    Mechanism.prototype.challenge = function (chal) {
+        var values = parse(chal);
+
+        this._salt = new Buffer(values.s || '', 'base64').toString('binary');
+        this._iterationCount = parseInt(values.i, 10);
+        this._nonce = values.r;
+        this._verifier = values.v;
+        this._error = values.e;
+        this._challenge = chal;
+
+        return this;
+    };
+
+
+    var responses = {};
+    responses[0] = function (mech, cred) {
+        mech._cnonce = mech._genNonce();
+
+        var authzid = '';
+        if (cred.authzid) {
+            authzid = 'a=' + saslname(cred.authzid);
+        }
+
+        mech._gs2Header = 'n,' + authzid + ',';
+
+        var nonce = 'r=' + mech._cnonce;
+        var username = 'n=' + saslname(cred.username);
+
+        mech._clientFirstMessageBare = username + ',' + nonce;
+        var result = mech._gs2Header + mech._clientFirstMessageBare
+
+        mech._stage = 1;
+
+        return result;
+    };
+    responses[1] = function (mech, cred) {
+        var gs2Header = new Buffer(mech._gs2Header).toString('base64');
+
+        mech._clientFinalMessageWithoutProof = 'c=' + gs2Header + ',r=' + mech._nonce;
+
+        var saltedPassword, clientKey, serverKey;
+        if (cred.clientKey && cred.serverKey) {
+            clientKey = cred.clientKey;
+            serverKey = cred.serverKey;
+        } else {
+            saltedPassword = cred.saltedPassword || Hi(cred.password, mech._salt, mech._iterationCount);
+            clientKey = HMAC(saltedPassword, 'Client Key');
+            serverKey = HMAC(saltedPassword, 'Server Key');
+        }
+
+        var storedKey = H(clientKey);
+        var authMessage = mech._clientFirstMessageBare + ',' +
+                          mech._challenge + ',' + 
+                          mech._clientFinalMessageWithoutProof;
+        var clientSignature = HMAC(storedKey, authMessage);
+
+        var xorstuff = XOR(clientKey, clientSignature);
+
+        var clientProof = new Buffer(xorstuff, 'binary').toString('base64');
+
+        mech._serverSignature = HMAC(serverKey, authMessage);
+
+        var result = mech._clientFinalMessageWithoutProof + ',p=' + clientProof;
+
+        mech._stage = 2;
+
+        mech.cache = {
+            saltedPassword: saltedPassword,
+            clientKey: clientKey,
+            serverKey: serverKey
+        };
+
+        return result;
+    };
+    responses[2] = function (mech, cred) {
+        // TODO: Signal errors 
+        return '';
+    };
+
+    /**
+     * Create a SHA-1 HMAC.
+     *
+     * @param {String} key
+     * @param {String} msg
+     * @api private
+     */
+    function HMAC(key, msg) {
+        return crypto.createHmac('sha1', key).update(msg).digest('binary');
+    }
+
+    /**
+     * Iteratively create an HMAC, with a salt.
+     *
+     * @param {String} text
+     * @param {String} salt
+     * @param {Number} iterations
+     * @api private
+     */
+    function Hi(text, salt, iterations) {
+        var ui1 = HMAC(text, salt + '\0\0\0\1');
+        var ui = ui1;
+        for (var i = 0; i < iterations - 1; i++) {
+            ui1 = HMAC(text, ui1);
+            ui = XOR(ui, ui1);
+        }
+        return ui;
+    }
+
+    /**
+     * Create a SHA-1 hash.
+     *
+     * @param {String} text
+     * @api private
+     */
+    function H(text) {
+        return crypto.createHash('sha1').update(text).digest('binary');
+    }
+
+    /**
+     * String XOR
+     *
+     * @param {String} a
+     * @param {String} b
+     * @api private
+     */
+    function XOR(a, b) {
+        a = new Buffer(a, 'binary');
+        b = new Buffer(b, 'binary');
+
+        var len = Math.min(a.length, b.length);
+        result = [];
+        for (var i = 0; i < len; i++) {
+            result.push(a[i] ^ b[i]);
+        }
+        result = new Buffer(result, 'binary');
+        return result.toString('binary');
+    }
+
+    /**
+     * Escape special characters in username values.
+     *
+     * @param {String} name
+     * @api private
+     */
+    function saslname(name) {
+        var escaped = [];
+        var curr = '';
+        for (var i = 0; i < name.length; i++) {
+            curr = name[i];
+            if (curr === ',') {
+                escaped.push('=2C');
+            } else if (curr === '=') {
+                escaped.push('=3D');
+            } else {
+                escaped.push(curr);
+            }
+        }
+        return escaped.join('');
+    }
+
+    /**
+     * Parse challenge.
+     *
+     * @api private
+     */
+    function parse(chal) {
+        var dtives = {};
+        var tokens = chal.split(/,(?=(?:[^"]|"[^"]*")*$)/);
+        for (var i = 0, len = tokens.length; i < len; i++) {
+            var dtiv = /(\w+)=["]?([^"]+)["]?$/.exec(tokens[i]);
+            if (dtiv) {
+                dtives[dtiv[1]] = dtiv[2];
+            }
+        }
+        return dtives;
+    }
+  
+ 
+    /**
+    * Return a unique nonce with the given `len`.
+    *
+    *     genNonce(10)();
+    *     // => "FDaS435D2z"
+    *
+    * @param {Number} len
+    * @return {Function}
+    * @api private
+    */
+    function genNonce(len) {
+        var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charlen = chars.length;
+
+        return function() {
+            var buf = [];
+            for (var i = 0; i < len; ++i) {
+                buf.push(chars[Math.random() * charlen | 0]);
+            }
+            return buf.join('');
+        }
+    }
+
+    exports = module.exports = Mechanism;
+}));
+
+},{"buffer":146,"crypto":211}],210:[function(_dereq_,module,exports){
+arguments[4][202][0].apply(exports,arguments)
+},{"./lib/mechanism":209}],211:[function(_dereq_,module,exports){
+var Buffer = _dereq_('buffer').Buffer
+var sha = _dereq_('./sha')
+var sha256 = _dereq_('./sha256')
+var rng = _dereq_('./rng')
+var md5 = _dereq_('./md5')
+
+var algorithms = {
+  sha1: {
+    hex: sha.hex_sha1,
+    base64: sha.b64_sha1,
+    binary: sha.str_sha1
+  },
+  sha256: {
+    hex: sha256.hex_sha256,
+    base64: sha256.b64_sha256,
+    binary: sha256.str_sha256
+  },
+  md5: {
+    hex: md5.hex_md5,
+    base64: md5.b64_md5,
+    binary: md5.bin_md5
+  }
+}
+
+var algorithmsHmac = {
+  sha1: {
+    hex: sha.hex_hmac_sha1,
+    base64: sha.b64_hmac_sha1,
+    binary: sha.str_hmac_sha1
+  },
+  sha256: {
+    hex: sha256.hex_hmac_sha256,
+    base64: sha256.b64_hmac_sha256,
+    binary: sha256.str_hmac_sha256
+  },
+  md5: {
+    hex: md5.hex_hmac_md5,
+    base64: md5.b64_hmac_md5,
+    binary: md5.bin_hmac_md5
+  }
+}
+
+
+function error () {
+  var m = [].slice.call(arguments).join(' ')
+  throw new Error([
+    m,
+    'we accept pull requests',
+    'http://github.com/dominictarr/crypto-browserify'
+    ].join('\n'))
+}
+
+exports.createHash = function (alg) {
+  alg = alg || 'sha1'
+  if(!algorithms[alg])
+    error('algorithm:', alg, 'is not yet supported')
+  var s = ''
+  var _alg = algorithms[alg]
+  return {
+    update: function (data) {
+      s += data
+      return this
+    },
+    digest: function (enc) {
+      enc = enc || 'binary'
+      var fn
+      if(!(fn = _alg[enc]))
+        error('encoding:', enc , 'is not yet supported for algorithm', alg)
+      var r = fn(s)
+      s = null //not meant to use the hash after you've called digest.
+      return r
+    }
+  }
+}
+
+exports.createHmac = function (alg, key) {
+  if (!algorithmsHmac[alg])
+    error('algorithm:', alg, 'is not yet supported')
+  if (typeof key != 'string')
+    key = key.toString('binary')
+  var s = ''
+  var _alg = algorithmsHmac[alg]
+  return {
+    update: function (data) {
+      s += data
+      return this
+    },
+    digest: function (enc) {
+      enc = enc || 'binary'
+      var fn
+      if (!(fn = _alg[enc]))
+        error('encoding:', enc, 'is not yet support for algorithm', alg)
+      var r = fn(key, s)
+      s = null
+      return r
+    }
+  }
+}
+
+exports.randomBytes = function(size, callback) {
+  if (callback && callback.call) {
+    try {
+      callback.call(this, undefined, new Buffer(rng(size)));
+    } catch (err) { callback(err); }
+  } else {
+    return new Buffer(rng(size));
+  }
+}
+
+function each(a, f) {
+  for(var i in a)
+    f(a[i], i)
+}
+
+// the least I can do is make error messages for the rest of the node.js/crypto api.
+each(['createCredentials'
+, 'createCipher'
+, 'createCipheriv'
+, 'createDecipher'
+, 'createDecipheriv'
+, 'createSign'
+, 'createVerify'
+, 'createDiffieHellman'
+, 'pbkdf2'], function (name) {
+  exports[name] = function () {
+    error('sorry,', name, 'is not implemented yet')
+  }
+})
+
+},{"./md5":212,"./rng":213,"./sha":214,"./sha256":215,"buffer":146}],212:[function(_dereq_,module,exports){
+/*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
+
+/*
+ * Configurable variables. You may need to tweak these to be compatible with
+ * the server-side, but the defaults work in most cases.
+ */
+var hexcase = 0;   /* hex output format. 0 - lowercase; 1 - uppercase        */
+var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
+var chrsz   = 8;   /* bits per input character. 8 - ASCII; 16 - Unicode      */
+
+/*
+ * These are the functions you'll usually want to call
+ * They take string arguments and return either hex or base-64 encoded strings
+ */
+function hex_md5(s){ return binl2hex(core_md5(str2binl(s), s.length * chrsz));}
+function b64_md5(s){ return binl2b64(core_md5(str2binl(s), s.length * chrsz));}
+function str_md5(s){ return binl2str(core_md5(str2binl(s), s.length * chrsz));}
+function hex_hmac_md5(key, data) { return binl2hex(core_hmac_md5(key, data)); }
+function b64_hmac_md5(key, data) { return binl2b64(core_hmac_md5(key, data)); }
+function str_hmac_md5(key, data) { return binl2str(core_hmac_md5(key, data)); }
+
+/*
+ * Perform a simple self-test to see if the VM is working
+ */
+function md5_vm_test()
+{
+  return hex_md5("abc") == "900150983cd24fb0d6963f7d28e17f72";
+}
+
+/*
+ * Calculate the MD5 of an array of little-endian words, and a bit length
+ */
+function core_md5(x, len)
+{
+  /* append padding */
+  x[len >> 5] |= 0x80 << ((len) % 32);
+  x[(((len + 64) >>> 9) << 4) + 14] = len;
+
+  var a =  1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d =  271733878;
+
+  for(var i = 0; i < x.length; i += 16)
+  {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+
+    a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+    d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
+    c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
+    b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+    a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+    d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+    c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+    b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
+    a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+    d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+    c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
+    b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
+    a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+    d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
+    c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
+    b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+
+    a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+    d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+    c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
+    b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
+    a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+    d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
+    c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
+    b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
+    a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+    d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
+    c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
+    b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+    a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
+    d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+    c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+    b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+
+    a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
+    d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+    c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
+    b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
+    a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+    d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+    c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
+    b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
+    a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
+    d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
+    c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
+    b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
+    a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+    d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
+    c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
+    b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+
+    a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+    d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+    c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
+    b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
+    a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+    d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+    c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
+    b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+    a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+    d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
+    c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+    b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
+    a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+    d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
+    c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
+    b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+  }
+  return Array(a, b, c, d);
+
+}
+
+/*
+ * These functions implement the four basic operations the algorithm uses.
+ */
+function md5_cmn(q, a, b, x, s, t)
+{
+  return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+}
+function md5_ff(a, b, c, d, x, s, t)
+{
+  return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+}
+function md5_gg(a, b, c, d, x, s, t)
+{
+  return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+}
+function md5_hh(a, b, c, d, x, s, t)
+{
+  return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+}
+function md5_ii(a, b, c, d, x, s, t)
+{
+  return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+}
+
+/*
+ * Calculate the HMAC-MD5, of a key and some data
+ */
+function core_hmac_md5(key, data)
+{
+  var bkey = str2binl(key);
+  if(bkey.length > 16) bkey = core_md5(bkey, key.length * chrsz);
+
+  var ipad = Array(16), opad = Array(16);
+  for(var i = 0; i < 16; i++)
+  {
+    ipad[i] = bkey[i] ^ 0x36363636;
+    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+  }
+
+  var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
+  return core_md5(opad.concat(hash), 512 + 128);
+}
+
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+function safe_add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+}
+
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+function bit_rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+
+/*
+ * Convert a string to an array of little-endian words
+ * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
+ */
+function str2binl(str)
+{
+  var bin = Array();
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < str.length * chrsz; i += chrsz)
+    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (i%32);
+  return bin;
+}
+
+/*
+ * Convert an array of little-endian words to a string
+ */
+function binl2str(bin)
+{
+  var str = "";
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < bin.length * 32; i += chrsz)
+    str += String.fromCharCode((bin[i>>5] >>> (i % 32)) & mask);
+  return str;
+}
+
+/*
+ * Convert an array of little-endian words to a hex string.
+ */
+function binl2hex(binarray)
+{
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i++)
+  {
+    str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +
+           hex_tab.charAt((binarray[i>>2] >> ((i%4)*8  )) & 0xF);
+  }
+  return str;
+}
+
+/*
+ * Convert an array of little-endian words to a base-64 string
+ */
+function binl2b64(binarray)
+{
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i += 3)
+  {
+    var triplet = (((binarray[i   >> 2] >> 8 * ( i   %4)) & 0xFF) << 16)
+                | (((binarray[i+1 >> 2] >> 8 * ((i+1)%4)) & 0xFF) << 8 )
+                |  ((binarray[i+2 >> 2] >> 8 * ((i+2)%4)) & 0xFF);
+    for(var j = 0; j < 4; j++)
+    {
+      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
+      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+    }
+  }
+  return str;
+}
+
+exports.hex_md5 = hex_md5;
+exports.b64_md5 = b64_md5;
+exports.bin_md5 = str_md5;
+exports.hex_hmac_md5 = hex_hmac_md5;
+exports.b64_hmac_md5 = b64_hmac_md5;
+exports.bin_hmac_md5 = str_hmac_md5;
+
+},{}],213:[function(_dereq_,module,exports){
+// Original code adapted from Robert Kieffer.
+// details at https://github.com/broofa/node-uuid
+(function() {
+  var _global = this;
+
+  var mathRNG, whatwgRNG;
+
+  // NOTE: Math.random() does not guarantee "cryptographic quality"
+  mathRNG = function(size) {
+    var bytes = new Array(size);
+    var r;
+
+    for (var i = 0, r; i < size; i++) {
+      if ((i & 0x03) == 0) r = Math.random() * 0x100000000;
+      bytes[i] = r >>> ((i & 0x03) << 3) & 0xff;
+    }
+
+    return bytes;
+  }
+
+  if (_global.crypto && crypto.getRandomValues) {
+    var _rnds = new Uint32Array(4);
+    whatwgRNG = function(size) {
+      var bytes = new Array(size);
+      crypto.getRandomValues(_rnds);
+
+      for (var c = 0 ; c < size; c++) {
+        bytes[c] = _rnds[c >> 2] >>> ((c & 0x03) * 8) & 0xff;
+      }
+      return bytes;
+    }
+  }
+
+  module.exports = whatwgRNG || mathRNG;
+
+}())
+
+},{}],214:[function(_dereq_,module,exports){
+/*
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
+ * in FIPS PUB 180-1
+ * Version 2.1a Copyright Paul Johnston 2000 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for details.
+ */
+
+exports.hex_sha1 = hex_sha1;
+exports.b64_sha1 = b64_sha1;
+exports.str_sha1 = str_sha1;
+exports.hex_hmac_sha1 = hex_hmac_sha1;
+exports.b64_hmac_sha1 = b64_hmac_sha1;
+exports.str_hmac_sha1 = str_hmac_sha1;
+
+/*
+ * Configurable variables. You may need to tweak these to be compatible with
+ * the server-side, but the defaults work in most cases.
+ */
+var hexcase = 0;   /* hex output format. 0 - lowercase; 1 - uppercase        */
+var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
+var chrsz   = 8;   /* bits per input character. 8 - ASCII; 16 - Unicode      */
+
+/*
+ * These are the functions you'll usually want to call
+ * They take string arguments and return either hex or base-64 encoded strings
+ */
+function hex_sha1(s){return binb2hex(core_sha1(str2binb(s),s.length * chrsz));}
+function b64_sha1(s){return binb2b64(core_sha1(str2binb(s),s.length * chrsz));}
+function str_sha1(s){return binb2str(core_sha1(str2binb(s),s.length * chrsz));}
+function hex_hmac_sha1(key, data){ return binb2hex(core_hmac_sha1(key, data));}
+function b64_hmac_sha1(key, data){ return binb2b64(core_hmac_sha1(key, data));}
+function str_hmac_sha1(key, data){ return binb2str(core_hmac_sha1(key, data));}
+
+/*
+ * Perform a simple self-test to see if the VM is working
+ */
+function sha1_vm_test()
+{
+  return hex_sha1("abc") == "a9993e364706816aba3e25717850c26c9cd0d89d";
+}
+
+/*
+ * Calculate the SHA-1 of an array of big-endian words, and a bit length
+ */
+function core_sha1(x, len)
+{
+  /* append padding */
+  x[len >> 5] |= 0x80 << (24 - len % 32);
+  x[((len + 64 >> 9) << 4) + 15] = len;
+
+  var w = Array(80);
+  var a =  1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d =  271733878;
+  var e = -1009589776;
+
+  for(var i = 0; i < x.length; i += 16)
+  {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+    var olde = e;
+
+    for(var j = 0; j < 80; j++)
+    {
+      if(j < 16) w[j] = x[i + j];
+      else w[j] = rol(w[j-3] ^ w[j-8] ^ w[j-14] ^ w[j-16], 1);
+      var t = safe_add(safe_add(rol(a, 5), sha1_ft(j, b, c, d)),
+                       safe_add(safe_add(e, w[j]), sha1_kt(j)));
+      e = d;
+      d = c;
+      c = rol(b, 30);
+      b = a;
+      a = t;
+    }
+
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+    e = safe_add(e, olde);
+  }
+  return Array(a, b, c, d, e);
+
+}
+
+/*
+ * Perform the appropriate triplet combination function for the current
+ * iteration
+ */
+function sha1_ft(t, b, c, d)
+{
+  if(t < 20) return (b & c) | ((~b) & d);
+  if(t < 40) return b ^ c ^ d;
+  if(t < 60) return (b & c) | (b & d) | (c & d);
+  return b ^ c ^ d;
+}
+
+/*
+ * Determine the appropriate additive constant for the current iteration
+ */
+function sha1_kt(t)
+{
+  return (t < 20) ?  1518500249 : (t < 40) ?  1859775393 :
+         (t < 60) ? -1894007588 : -899497514;
+}
+
+/*
+ * Calculate the HMAC-SHA1 of a key and some data
+ */
+function core_hmac_sha1(key, data)
+{
+  var bkey = str2binb(key);
+  if(bkey.length > 16) bkey = core_sha1(bkey, key.length * chrsz);
+
+  var ipad = Array(16), opad = Array(16);
+  for(var i = 0; i < 16; i++)
+  {
+    ipad[i] = bkey[i] ^ 0x36363636;
+    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+  }
+
+  var hash = core_sha1(ipad.concat(str2binb(data)), 512 + data.length * chrsz);
+  return core_sha1(opad.concat(hash), 512 + 160);
+}
+
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+function safe_add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+}
+
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+function rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+
+/*
+ * Convert an 8-bit or 16-bit string to an array of big-endian words
+ * In 8-bit function, characters >255 have their hi-byte silently ignored.
+ */
+function str2binb(str)
+{
+  var bin = Array();
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < str.length * chrsz; i += chrsz)
+    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (32 - chrsz - i%32);
+  return bin;
+}
+
+/*
+ * Convert an array of big-endian words to a string
+ */
+function binb2str(bin)
+{
+  var str = "";
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < bin.length * 32; i += chrsz)
+    str += String.fromCharCode((bin[i>>5] >>> (32 - chrsz - i%32)) & mask);
+  return str;
+}
+
+/*
+ * Convert an array of big-endian words to a hex string.
+ */
+function binb2hex(binarray)
+{
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i++)
+  {
+    str += hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8+4)) & 0xF) +
+           hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8  )) & 0xF);
+  }
+  return str;
+}
+
+/*
+ * Convert an array of big-endian words to a base-64 string
+ */
+function binb2b64(binarray)
+{
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i += 3)
+  {
+    var triplet = (((binarray[i   >> 2] >> 8 * (3 -  i   %4)) & 0xFF) << 16)
+                | (((binarray[i+1 >> 2] >> 8 * (3 - (i+1)%4)) & 0xFF) << 8 )
+                |  ((binarray[i+2 >> 2] >> 8 * (3 - (i+2)%4)) & 0xFF);
+    for(var j = 0; j < 4; j++)
+    {
+      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
+      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+    }
+  }
+  return str;
+}
+
+
+},{}],215:[function(_dereq_,module,exports){
+
+/**
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
+ * in FIPS 180-2
+ * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ *
+ */
+
+exports.hex_sha256 = hex_sha256;
+exports.b64_sha256 = b64_sha256;
+exports.str_sha256 = str_sha256;
+exports.hex_hmac_sha256 = hex_hmac_sha256;
+exports.b64_hmac_sha256 = b64_hmac_sha256;
+exports.str_hmac_sha256 = str_hmac_sha256;
+
+/*
+ * Configurable variables. You may need to tweak these to be compatible with
+ * the server-side, but the defaults work in most cases.
+ */
+var hexcase = 0;   /* hex output format. 0 - lowercase; 1 - uppercase        */
+var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
+var chrsz   = 8;   /* bits per input character. 8 - ASCII; 16 - Unicode      */
+
+/*
+ * These are the functions you'll usually want to call
+ * They take string arguments and return either hex or base-64 encoded strings
+ */
+function hex_sha256(s){return binb2hex(core_sha256(str2binb(s),s.length * chrsz));}
+function b64_sha256(s){return binb2b64(core_sha256(str2binb(s),s.length * chrsz));}
+function str_sha256(s){return binb2str(core_sha256(str2binb(s),s.length * chrsz));}
+function hex_hmac_sha256(key, data){ return binb2hex(core_hmac_sha256(key, data));}
+function b64_hmac_sha256(key, data){ return binb2b64(core_hmac_sha256(key, data));}
+function str_hmac_sha256(key, data){ return binb2str(core_hmac_sha256(key, data));}
+
+var safe_add = function(x, y) {
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+};
+
+var S = function(X, n) {
+  return (X >>> n) | (X << (32 - n));
+};
+
+var R = function(X, n) {
+  return (X >>> n);
+};
+
+var Ch = function(x, y, z) {
+  return ((x & y) ^ ((~x) & z));
+};
+
+var Maj = function(x, y, z) {
+  return ((x & y) ^ (x & z) ^ (y & z));
+};
+
+var Sigma0256 = function(x) {
+  return (S(x, 2) ^ S(x, 13) ^ S(x, 22));
+};
+
+var Sigma1256 = function(x) {
+  return (S(x, 6) ^ S(x, 11) ^ S(x, 25));
+};
+
+var Gamma0256 = function(x) {
+  return (S(x, 7) ^ S(x, 18) ^ R(x, 3));
+};
+
+var Gamma1256 = function(x) {
+  return (S(x, 17) ^ S(x, 19) ^ R(x, 10));
+};
+
+var core_sha256 = function(m, l) {
+  var K = new Array(0x428A2F98,0x71374491,0xB5C0FBCF,0xE9B5DBA5,0x3956C25B,0x59F111F1,0x923F82A4,0xAB1C5ED5,0xD807AA98,0x12835B01,0x243185BE,0x550C7DC3,0x72BE5D74,0x80DEB1FE,0x9BDC06A7,0xC19BF174,0xE49B69C1,0xEFBE4786,0xFC19DC6,0x240CA1CC,0x2DE92C6F,0x4A7484AA,0x5CB0A9DC,0x76F988DA,0x983E5152,0xA831C66D,0xB00327C8,0xBF597FC7,0xC6E00BF3,0xD5A79147,0x6CA6351,0x14292967,0x27B70A85,0x2E1B2138,0x4D2C6DFC,0x53380D13,0x650A7354,0x766A0ABB,0x81C2C92E,0x92722C85,0xA2BFE8A1,0xA81A664B,0xC24B8B70,0xC76C51A3,0xD192E819,0xD6990624,0xF40E3585,0x106AA070,0x19A4C116,0x1E376C08,0x2748774C,0x34B0BCB5,0x391C0CB3,0x4ED8AA4A,0x5B9CCA4F,0x682E6FF3,0x748F82EE,0x78A5636F,0x84C87814,0x8CC70208,0x90BEFFFA,0xA4506CEB,0xBEF9A3F7,0xC67178F2);
+  var HASH = new Array(0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A, 0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19);
+    var W = new Array(64);
+    var a, b, c, d, e, f, g, h, i, j;
+    var T1, T2;
+  /* append padding */
+  m[l >> 5] |= 0x80 << (24 - l % 32);
+  m[((l + 64 >> 9) << 4) + 15] = l;
+  for (var i = 0; i < m.length; i += 16) {
+    a = HASH[0]; b = HASH[1]; c = HASH[2]; d = HASH[3]; e = HASH[4]; f = HASH[5]; g = HASH[6]; h = HASH[7];
+    for (var j = 0; j < 64; j++) {
+      if (j < 16) {
+        W[j] = m[j + i];
+      } else {
+        W[j] = safe_add(safe_add(safe_add(Gamma1256(W[j - 2]), W[j - 7]), Gamma0256(W[j - 15])), W[j - 16]);
+      }
+      T1 = safe_add(safe_add(safe_add(safe_add(h, Sigma1256(e)), Ch(e, f, g)), K[j]), W[j]);
+      T2 = safe_add(Sigma0256(a), Maj(a, b, c));
+      h = g; g = f; f = e; e = safe_add(d, T1); d = c; c = b; b = a; a = safe_add(T1, T2);
+    }
+    HASH[0] = safe_add(a, HASH[0]); HASH[1] = safe_add(b, HASH[1]); HASH[2] = safe_add(c, HASH[2]); HASH[3] = safe_add(d, HASH[3]);
+    HASH[4] = safe_add(e, HASH[4]); HASH[5] = safe_add(f, HASH[5]); HASH[6] = safe_add(g, HASH[6]); HASH[7] = safe_add(h, HASH[7]);
+  }
+  return HASH;
+};
+
+var str2binb = function(str) {
+  var bin = Array();
+  var mask = (1 << chrsz) - 1;
+  for (var i = 0; i < str.length * chrsz; i += chrsz) {
+    bin[i >> 5] |= (str.charCodeAt(i / chrsz) & mask) << (24 - i % 32);
+  }
+  return bin;
+};
+
+/*
+ * Convert an array of big-endian words to a string
+ */
+function binb2str(bin)
+{
+  var str = "";
+  var mask = (1 << chrsz) - 1;
+  for (var i = 0; i < bin.length * 32; i += chrsz)
+    str += String.fromCharCode((bin[i >> 5] >>> (32 - chrsz - i % 32)) & mask);
+  return str;
+}
+
+var hex2binb = function(a) {
+  var b = [], length = a.length, i, num;
+  for (i = 0; i < length; i += 2) {
+    num = parseInt(a.substr(i, 2), 16);
+    if (!isNaN(num)) {
+      b[i >> 3] |= num << (24 - (4 * (i % 8)));
+    } else {
+      return "INVALID HEX STRING";
+    }
+  }
+  return b;
+};
+
+var binb2hex = function(binarray) {
+  //var hexcase = 0; /* hex output format. 0 - lowercase; 1 - uppercase */
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var str = "";
+  for (var i = 0; i < binarray.length * 4; i++) {
+    str += hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8+4)) & 0xF) + hex_tab.charAt((binarray[i>>2] >> ((3 - i%4)*8  )) & 0xF);
+  }
+  return str;
+};
+
+var binb2b64 = function(a) {
+  var b = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" + "0123456789+/", str = "", length = a.length * 4, i, j, triplet;
+  var b64pad = "=";
+  for (i = 0; i < length; i += 3) {
+    triplet = (((a[i >> 2] >> 8 * (3 - i % 4)) & 0xFF) << 16) | (((a[i + 1 >> 2] >> 8 * (3 - (i + 1) % 4)) & 0xFF) << 8) | ((a[i + 2 >> 2] >> 8 * (3 - (i + 2) % 4)) & 0xFF);
+    for (j = 0; j < 4; j += 1) {
+      if (i * 8 + j * 6 <= a.length * 32) {
+        str += b.charAt((triplet >> 6 * (3 - j)) & 0x3F);
+      } else {
+        str += b64pad;
+      }
+    }
+}
+  return str;
+};
+
+var core_hmac_sha256 = function(key, data) {
+  var bkey = str2binb(key);
+  if (bkey.length > 16) {
+    bkey = core_sha256(bkey, key.length * chrsz);
+  }
+  var ipad = Array(16), opad = Array(16);
+  for (var i = 0; i < 16; i++) {
+    ipad[i] = bkey[i] ^ 0x36363636;
+    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+  }
+  var hash = core_sha256(ipad.concat(str2binb(data)), 512 + data.length * chrsz);
+  return core_sha256(opad.concat(hash), 512 + 256);
+};
+
+
+},{}],216:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports, module);
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports', 'module'], factory);
+  }
+}(this, function(exports, module) {
+  
+  /**
+   * `Factory` constructor.
+   *
+   * @api public
+   */
+  function Factory() {
+    this._mechs = [];
+  }
+  
+  /**
+   * Utilize the given `mech` with optional `name`, overridding the mechanism's
+   * default name.
+   *
+   * Examples:
+   *
+   *     factory.use(FooMechanism);
+   *
+   *     factory.use('XFOO', FooMechanism);
+   *
+   * @param {String|Mechanism} name
+   * @param {Mechanism} mech
+   * @return {Factory} for chaining
+   * @api public
+   */
+  Factory.prototype.use = function(name, mech) {
+    if (!mech) {
+      mech = name;
+      name = mech.prototype.name;
+    }
+    this._mechs.push({ name: name, mech: mech });
+    return this;
+  };
+  
+  /**
+   * Create a new mechanism from supported list of `mechs`.
+   *
+   * If no mechanisms are supported, returns `null`.
+   *
+   * Examples:
+   *
+   *     var mech = factory.create(['FOO', 'BAR']);
+   *
+   * @param {Array} mechs
+   * @return {Mechanism}
+   * @api public
+   */
+  Factory.prototype.create = function(mechs) {
+    for (var i = 0, len = this._mechs.length; i < len; i++) {
+      for (var j = 0, jlen = mechs.length; j < jlen; j++) {
+        var entry = this._mechs[i];
+        if (entry.name == mechs[j]) {
+          return new entry.mech();
+        }
+      }
+    }
+    return null;
+  };
+
+  exports = module.exports = Factory;
+  
+}));
+
+},{}],217:[function(_dereq_,module,exports){
+(function(root, factory) {
+  if (typeof exports === 'object') {
+    // CommonJS
+    factory(exports,
+            module,
+            _dereq_('./lib/factory'));
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['exports',
+            'module',
+            './lib/factory'], factory);
+  }
+}(this, function(exports, module, Factory) {
+  
+  exports = module.exports = Factory;
+  exports.Factory = Factory;
+  
+}));
+
+},{"./lib/factory":216}],218:[function(_dereq_,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -22992,1006 +25125,7 @@ module.exports = {
   }
 }).call(this);
 
-},{}],195:[function(_dereq_,module,exports){
-(function (Buffer){
-//     uuid.js
-//
-//     Copyright (c) 2010-2012 Robert Kieffer
-//     MIT License - http://opensource.org/licenses/mit-license.php
-
-(function() {
-  var _global = this;
-
-  // Unique ID creation requires a high quality random # generator.  We feature
-  // detect to determine the best RNG source, normalizing to a function that
-  // returns 128-bits of randomness, since that's what's usually required
-  var _rng;
-
-  // Node.js crypto-based RNG - http://nodejs.org/docs/v0.6.2/api/crypto.html
-  //
-  // Moderately fast, high quality
-  if (typeof(_dereq_) == 'function') {
-    try {
-      var _rb = _dereq_('crypto').randomBytes;
-      _rng = _rb && function() {return _rb(16);};
-    } catch(e) {}
-  }
-
-  if (!_rng && _global.crypto && crypto.getRandomValues) {
-    // WHATWG crypto-based RNG - http://wiki.whatwg.org/wiki/Crypto
-    //
-    // Moderately fast, high quality
-    var _rnds8 = new Uint8Array(16);
-    _rng = function whatwgRNG() {
-      crypto.getRandomValues(_rnds8);
-      return _rnds8;
-    };
-  }
-
-  if (!_rng) {
-    // Math.random()-based (RNG)
-    //
-    // If all else fails, use Math.random().  It's fast, but is of unspecified
-    // quality.
-    var  _rnds = new Array(16);
-    _rng = function() {
-      for (var i = 0, r; i < 16; i++) {
-        if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
-        _rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
-      }
-
-      return _rnds;
-    };
-  }
-
-  // Buffer class to use
-  var BufferClass = typeof(Buffer) == 'function' ? Buffer : Array;
-
-  // Maps for number <-> hex string conversion
-  var _byteToHex = [];
-  var _hexToByte = {};
-  for (var i = 0; i < 256; i++) {
-    _byteToHex[i] = (i + 0x100).toString(16).substr(1);
-    _hexToByte[_byteToHex[i]] = i;
-  }
-
-  // **`parse()` - Parse a UUID into it's component bytes**
-  function parse(s, buf, offset) {
-    var i = (buf && offset) || 0, ii = 0;
-
-    buf = buf || [];
-    s.toLowerCase().replace(/[0-9a-f]{2}/g, function(oct) {
-      if (ii < 16) { // Don't overflow!
-        buf[i + ii++] = _hexToByte[oct];
-      }
-    });
-
-    // Zero out remaining bytes if string was short
-    while (ii < 16) {
-      buf[i + ii++] = 0;
-    }
-
-    return buf;
-  }
-
-  // **`unparse()` - Convert UUID byte array (ala parse()) into a string**
-  function unparse(buf, offset) {
-    var i = offset || 0, bth = _byteToHex;
-    return  bth[buf[i++]] + bth[buf[i++]] +
-            bth[buf[i++]] + bth[buf[i++]] + '-' +
-            bth[buf[i++]] + bth[buf[i++]] + '-' +
-            bth[buf[i++]] + bth[buf[i++]] + '-' +
-            bth[buf[i++]] + bth[buf[i++]] + '-' +
-            bth[buf[i++]] + bth[buf[i++]] +
-            bth[buf[i++]] + bth[buf[i++]] +
-            bth[buf[i++]] + bth[buf[i++]];
-  }
-
-  // **`v1()` - Generate time-based UUID**
-  //
-  // Inspired by https://github.com/LiosK/UUID.js
-  // and http://docs.python.org/library/uuid.html
-
-  // random #'s we need to init node and clockseq
-  var _seedBytes = _rng();
-
-  // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
-  var _nodeId = [
-    _seedBytes[0] | 0x01,
-    _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
-  ];
-
-  // Per 4.2.2, randomize (14 bit) clockseq
-  var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
-
-  // Previous uuid creation time
-  var _lastMSecs = 0, _lastNSecs = 0;
-
-  // See https://github.com/broofa/node-uuid for API details
-  function v1(options, buf, offset) {
-    var i = buf && offset || 0;
-    var b = buf || [];
-
-    options = options || {};
-
-    var clockseq = options.clockseq != null ? options.clockseq : _clockseq;
-
-    // UUID timestamps are 100 nano-second units since the Gregorian epoch,
-    // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
-    // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
-    // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
-    var msecs = options.msecs != null ? options.msecs : new Date().getTime();
-
-    // Per 4.2.1.2, use count of uuid's generated during the current clock
-    // cycle to simulate higher resolution clock
-    var nsecs = options.nsecs != null ? options.nsecs : _lastNSecs + 1;
-
-    // Time since last uuid creation (in msecs)
-    var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
-
-    // Per 4.2.1.2, Bump clockseq on clock regression
-    if (dt < 0 && options.clockseq == null) {
-      clockseq = clockseq + 1 & 0x3fff;
-    }
-
-    // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
-    // time interval
-    if ((dt < 0 || msecs > _lastMSecs) && options.nsecs == null) {
-      nsecs = 0;
-    }
-
-    // Per 4.2.1.2 Throw error if too many uuids are requested
-    if (nsecs >= 10000) {
-      throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
-    }
-
-    _lastMSecs = msecs;
-    _lastNSecs = nsecs;
-    _clockseq = clockseq;
-
-    // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
-    msecs += 12219292800000;
-
-    // `time_low`
-    var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
-    b[i++] = tl >>> 24 & 0xff;
-    b[i++] = tl >>> 16 & 0xff;
-    b[i++] = tl >>> 8 & 0xff;
-    b[i++] = tl & 0xff;
-
-    // `time_mid`
-    var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
-    b[i++] = tmh >>> 8 & 0xff;
-    b[i++] = tmh & 0xff;
-
-    // `time_high_and_version`
-    b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
-    b[i++] = tmh >>> 16 & 0xff;
-
-    // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
-    b[i++] = clockseq >>> 8 | 0x80;
-
-    // `clock_seq_low`
-    b[i++] = clockseq & 0xff;
-
-    // `node`
-    var node = options.node || _nodeId;
-    for (var n = 0; n < 6; n++) {
-      b[i + n] = node[n];
-    }
-
-    return buf ? buf : unparse(b);
-  }
-
-  // **`v4()` - Generate random UUID**
-
-  // See https://github.com/broofa/node-uuid for API details
-  function v4(options, buf, offset) {
-    // Deprecated - 'format' argument, as supported in v1.2
-    var i = buf && offset || 0;
-
-    if (typeof(options) == 'string') {
-      buf = options == 'binary' ? new BufferClass(16) : null;
-      options = null;
-    }
-    options = options || {};
-
-    var rnds = options.random || (options.rng || _rng)();
-
-    // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
-    rnds[6] = (rnds[6] & 0x0f) | 0x40;
-    rnds[8] = (rnds[8] & 0x3f) | 0x80;
-
-    // Copy bytes to buffer, if provided
-    if (buf) {
-      for (var ii = 0; ii < 16; ii++) {
-        buf[i + ii] = rnds[ii];
-      }
-    }
-
-    return buf || unparse(rnds);
-  }
-
-  // Export public API
-  var uuid = v4;
-  uuid.v1 = v1;
-  uuid.v4 = v4;
-  uuid.parse = parse;
-  uuid.unparse = unparse;
-  uuid.BufferClass = BufferClass;
-
-  if (typeof define === 'function' && define.amd) {
-    // Publish as AMD module
-    define(function() {return uuid;});
-  } else if (typeof(module) != 'undefined' && module.exports) {
-    // Publish as node.js module
-    module.exports = uuid;
-  } else {
-    // Publish as global (in browsers)
-    var _previousRoot = _global.uuid;
-
-    // **`noConflict()` - (browser only) to reset global 'uuid' var**
-    uuid.noConflict = function() {
-      _global.uuid = _previousRoot;
-      return uuid;
-    };
-
-    _global.uuid = uuid;
-  }
-}).call(this);
-
-}).call(this,_dereq_("buffer").Buffer)
-},{"buffer":146,"crypto":150}],196:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports, module);
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports', 'module'], factory);
-  }
-}(this, function(exports, module) {
-
-  /**
-   * ANONYMOUS `Mechanism` constructor.
-   *
-   * This class implements the ANONYMOUS SASL mechanism.
-   *
-   * The ANONYMOUS SASL mechanism provides support for permitting anonymous
-   * access to various services
-   *
-   * References:
-   *  - [RFC 4505](http://tools.ietf.org/html/rfc4505)
-   *
-   * @api public
-   */
-  function Mechanism() {
-  }
-  
-  Mechanism.prototype.name = 'ANONYMOUS';
-  Mechanism.prototype.clientFirst = true;
-  
-  /**
-   * Encode a response using optional trace information.
-   *
-   * Options:
-   *  - `trace`  trace information (optional)
-   *
-   * @param {Object} cred
-   * @api public
-   */
-  Mechanism.prototype.response = function(cred) {
-    return cred.trace || '';
-  };
-  
-  /**
-   * Decode a challenge issued by the server.
-   *
-   * @param {String} chal
-   * @api public
-   */
-  Mechanism.prototype.challenge = function(chal) {
-  };
-
-  exports = module.exports = Mechanism;
-  
-}));
-
-},{}],197:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports,
-            module,
-            _dereq_('./lib/mechanism'));
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports',
-            'module',
-            './lib/mechanism'], factory);
-  }
-}(this, function(exports, module, Mechanism) {
-
-  exports = module.exports = Mechanism;
-  exports.Mechanism = Mechanism;
-  
-}));
-
-},{"./lib/mechanism":196}],198:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports, module, _dereq_('crypto'));
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports', 'module', 'crypto'], factory);
-  }
-}(this, function(exports, module, crypto) {
-  
-  /**
-   * DIGEST-MD5 `Mechanism` constructor.
-   *
-   * This class implements the DIGEST-MD5 SASL mechanism.
-   *
-   * References:
-   *  - [RFC 2831](http://tools.ietf.org/html/rfc2831)
-   *
-   * @api public
-   */
-  function Mechanism(options) {
-    options = options || {};
-    this._genNonce = options.genNonce || genNonce(32);
-  }
-  
-  Mechanism.prototype.name = 'DIGEST-MD5';
-  Mechanism.prototype.clientFirst = false;
-  
-  /**
-   * Encode a response using given credential.
-   *
-   * Options:
-   *  - `username`
-   *  - `password`
-   *  - `host`
-   *  - `serviceType`
-   *  - `authzid`   authorization identity (optional)
-   *
-   * @param {Object} cred
-   * @api public
-   */
-  Mechanism.prototype.response = function(cred) {
-    // TODO: Implement support for subsequent authentication.  This requires
-    //       that the client be able to store username, realm, nonce,
-    //       nonce-count, cnonce, and qop values from prior authentication.
-    //       The impact of this requirement needs to be investigated.
-    //
-    //       See RFC 2831 (Section 2.2) for further details.
-    
-    // TODO: Implement support for auth-int and auth-conf, as defined in RFC
-    //       2831 sections 2.3 Integrity Protection and 2.4 Confidentiality
-    //       Protection, respectively.
-    //
-    //       Note that supporting this functionality has implications
-    //       regarding the negotiation of security layers via SASL.  Due to
-    //       the fact that TLS has largely superseded this functionality,
-    //       implementing it is a low priority.
-  
-    var uri = cred.serviceType + '/' + cred.host;
-    if (cred.serviceName && cred.host !== cred.serviceName) {
-      uri += '/' + serviceName;
-    }
-    var realm = cred.realm || this._realm || ''
-      , cnonce = this._genNonce()
-      , nc = '00000001'
-      , qop = 'auth'
-      , ha1
-      , ha2
-      , digest;
-  
-    var str = '';
-    str += 'username="' + cred.username + '"';
-    if (realm) { str += ',realm="' + realm + '"'; };
-    str += ',nonce="' + this._nonce + '"';
-    str += ',cnonce="' + cnonce + '"';
-    str += ',nc=' + nc;
-    str += ',qop=' + qop;
-    str += ',digest-uri="' + uri + '"';
-    
-    if (cred.authzid) {
-      ha1 = md5(md5(cred.username + ":" + realm + ":" + cred.password, 'binary') + ":" + this._nonce + ":" + cnonce + ":" + cred.authzid);
-    } else {
-      ha1 = md5(md5(cred.username + ":" + realm + ":" + cred.password, 'binary') + ":" + this._nonce + ":" + cnonce);
-    }
-    
-    if (qop == 'auth') {
-      ha2 = md5('AUTHENTICATE:' + uri);
-    } else if (qop == 'auth-int' || qop == 'auth-conf') {
-      ha2 = md5('AUTHENTICATE:' + uri + ':00000000000000000000000000000000');
-    }
-    
-    digest = md5(ha1 + ":" + this._nonce + ":" + nc + ":" + cnonce + ":" + qop + ":" + ha2);
-    str += ',response=' + digest;
-    
-    if (this._charset == 'utf-8') { str += ',charset=utf-8'; }
-    if (cred.authzid) { str += 'authzid="' + cred.authzid + '"'; }
-    
-    return str;
-  };
-  
-  /**
-   * Decode a challenge issued by the server.
-   *
-   * @param {String} chal
-   * @return {Mechanism} for chaining
-   * @api public
-   */
-  Mechanism.prototype.challenge = function(chal) {
-    var dtives = parse(chal);
-    
-    // TODO: Implement support for multiple realm directives, as allowed by the
-    //       DIGEST-MD5 specification.
-    this._realm = dtives['realm'];
-    this._nonce = dtives['nonce'];
-    this._qop = (dtives['qop'] || 'auth').split(',');
-    this._stale = dtives['stale'];
-    this._maxbuf = parseInt(dtives['maxbuf']) || 65536;
-    this._charset = dtives['charset'];
-    this._algo = dtives['algorithm'];
-    this._cipher = dtives['cipher'];
-    if (this._cipher) { this._cipher.split(','); }
-    return this;
-  };
-  
-  
-  /**
-   * Parse challenge.
-   *
-   * @api private
-   */
-  function parse(chal) {
-    var dtives = {};
-    var tokens = chal.split(/,(?=(?:[^"]|"[^"]*")*$)/);
-    for (var i = 0, len = tokens.length; i < len; i++) {
-      var dtiv = /(\w+)=["]?([^"]+)["]?$/.exec(tokens[i]);
-      if (dtiv) {
-        dtives[dtiv[1]] = dtiv[2];
-      }
-    }
-    return dtives;
-  }
-  
-  /**
-   * Return a unique nonce with the given `len`.
-   *
-   *     genNonce(10)();
-   *     // => "FDaS435D2z"
-   *
-   * @param {Number} len
-   * @return {Function}
-   * @api private
-   */
-  function genNonce(len) {
-    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-      , charlen = chars.length;
-  
-    return function() {
-      var buf = [];
-      for (var i = 0; i < len; ++i) {
-        buf.push(chars[Math.random() * charlen | 0]);
-      }
-      return buf.join('');
-    }
-  }
-  
-  /**
-   * Return md5 hash of the given string and optional encoding,
-   * defaulting to hex.
-   *
-   *     md5('wahoo');
-   *     // => "e493298061761236c96b02ea6aa8a2ad"
-   *
-   * @param {String} str
-   * @param {String} encoding
-   * @return {String}
-   * @api private
-   */
-  function md5(str, encoding){
-    return crypto
-      .createHash('md5')
-      .update(str)
-      .digest(encoding || 'hex');
-  }
-
-
-  exports = module.exports = Mechanism;
-  
-}));
-
-},{"crypto":150}],199:[function(_dereq_,module,exports){
-arguments[4][197][0].apply(exports,arguments)
-},{"./lib/mechanism":198}],200:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports, module);
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports', 'module'], factory);
-  }
-}(this, function(exports, module) {
-
-  /**
-   * EXTERNAL `Mechanism` constructor.
-   *
-   * This class implements the EXTERNAL SASL mechanism.
-   *
-   * The EXTERNAL SASL mechanism provides support for authentication using
-   * credentials established by external means. 
-   *
-   * References:
-   *  - [RFC 4422](http://tools.ietf.org/html/rfc4422)
-   *
-   * @api public
-   */
-  function Mechanism() {
-  }
-  
-  Mechanism.prototype.name = 'EXTERNAL';
-  Mechanism.prototype.clientFirst = true;
-  
-  /**
-   * Encode a response using given credential.
-   *
-   * Options:
-   *  - `authzid`   authorization identity (optional)
-   *
-   * @param {Object} cred
-   * @api public
-   */
-  Mechanism.prototype.response = function(cred) {
-    return cred.authzid || '';
-  };
-  
-  /**
-   * Decode a challenge issued by the server.
-   *
-   * @param {String} chal
-   * @api public
-   */
-  Mechanism.prototype.challenge = function(chal) {
-  };
-
-  exports = module.exports = Mechanism;
-  
-}));
-
-},{}],201:[function(_dereq_,module,exports){
-arguments[4][197][0].apply(exports,arguments)
-},{"./lib/mechanism":200}],202:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports, module);
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports', 'module'], factory);
-  }
-}(this, function(exports, module) {
-
-  /**
-   * PLAIN `Mechanism` constructor.
-   *
-   * This class implements the PLAIN SASL mechanism.
-   *
-   * The PLAIN SASL mechanism provides support for exchanging a clear-text
-   * username and password.  This mechanism should not be used without adequate
-   * security provided by an underlying transport layer. 
-   *
-   * References:
-   *  - [RFC 4616](http://tools.ietf.org/html/rfc4616)
-   *
-   * @api public
-   */
-  function Mechanism() {
-  }
-  
-  Mechanism.prototype.name = 'PLAIN';
-  Mechanism.prototype.clientFirst = true;
-  
-  /**
-   * Encode a response using given credential.
-   *
-   * Options:
-   *  - `username`
-   *  - `password`
-   *  - `authzid`   authorization identity (optional)
-   *
-   * @param {Object} cred
-   * @api public
-   */
-  Mechanism.prototype.response = function(cred) {
-    var str = '';
-    str += cred.authzid || '';
-    str += '\0';
-    str += cred.username;
-    str += '\0';
-    str += cred.password;
-    return str;
-  };
-  
-  /**
-   * Decode a challenge issued by the server.
-   *
-   * @param {String} chal
-   * @return {Mechanism} for chaining
-   * @api public
-   */
-  Mechanism.prototype.challenge = function(chal) {
-    return this;
-  };
-
-  exports = module.exports = Mechanism;
-  
-}));
-
-},{}],203:[function(_dereq_,module,exports){
-arguments[4][197][0].apply(exports,arguments)
-},{"./lib/mechanism":202}],204:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports, module, _dereq_('crypto'), _dereq_('buffer'));
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports', 'module', 'crypto', 'buffer'], factory);
-  }
-}(this, function(exports, module, crypto, buffer) {
-
-    var Buffer = buffer.Buffer;
- 
-    /**
-     * SCRAM-SHA-1 `Mechanism` constructor.
-     *
-     * This class implements the SCRAM-SHA-1 SASL mechanism.
-     *
-     * References:
-     *  - [RFC 5802](http://tools.ietf.org/html/rfc5802)
-     *
-     * @api public
-     */
-    function Mechanism(options) {
-        options = options || {};
-        this._genNonce = options.genNonce || genNonce(32);
-        this._stage = 0;
-    }
-
-    Mechanism.prototype.name = 'SCRAM-SHA-1';
-    Mechanism.prototype.clientFirst = true;
-
-    /**
-     * Encode a response using given credentials.
-     *
-     * Options:
-     *  - `username`
-     *  - `password`
-     *  - `authzid`
-     *
-     * @param {object} cred
-     * @api public
-     */
-    Mechanism.prototype.response = function (cred) {
-        return responses[this._stage](this, cred); 
-    };
-
-    /**
-     * Decode a challenge issued by the server.
-     *
-     * @param {String} chal
-     * @return {Mechanism} for chaining
-     * @api public
-     */
-    Mechanism.prototype.challenge = function (chal) {
-        var values = parse(chal);
-
-        this._salt = new Buffer(values.s || '', 'base64').toString('binary');
-        this._iterationCount = parseInt(values.i, 10);
-        this._nonce = values.r;
-        this._verifier = values.v;
-        this._error = values.e;
-        this._challenge = chal;
-
-        return this;
-    };
-
-
-    var responses = {};
-    responses[0] = function (mech, cred) {
-        mech._cnonce = mech._genNonce();
-
-        var authzid = '';
-        if (cred.authzid) {
-            authzid = 'a=' + saslname(cred.authzid);
-        }
-
-        mech._gs2Header = 'n,' + authzid + ',';
-
-        var nonce = 'r=' + mech._cnonce;
-        var username = 'n=' + saslname(cred.username);
-
-        mech._clientFirstMessageBare = username + ',' + nonce;
-        var result = mech._gs2Header + mech._clientFirstMessageBare
-
-        mech._stage = 1;
-
-        return result;
-    };
-    responses[1] = function (mech, cred) {
-        var gs2Header = new Buffer(mech._gs2Header).toString('base64');
-
-        mech._clientFinalMessageWithoutProof = 'c=' + gs2Header + ',r=' + mech._nonce;
-
-        var saltedPassword, clientKey, serverKey;
-        if (cred.clientKey && cred.serverKey) {
-            clientKey = cred.clientKey;
-            serverKey = cred.serverKey;
-        } else {
-            saltedPassword = cred.saltedPassword || Hi(cred.password, mech._salt, mech._iterationCount);
-            clientKey = HMAC(saltedPassword, 'Client Key');
-            serverKey = HMAC(saltedPassword, 'Server Key');
-        }
-
-        var storedKey = H(clientKey);
-        var authMessage = mech._clientFirstMessageBare + ',' +
-                          mech._challenge + ',' + 
-                          mech._clientFinalMessageWithoutProof;
-        var clientSignature = HMAC(storedKey, authMessage);
-
-        var xorstuff = XOR(clientKey, clientSignature);
-
-        var clientProof = new Buffer(xorstuff, 'binary').toString('base64');
-
-        mech._serverSignature = HMAC(serverKey, authMessage);
-
-        var result = mech._clientFinalMessageWithoutProof + ',p=' + clientProof;
-
-        mech._stage = 2;
-
-        mech.cache = {
-            saltedPassword: saltedPassword,
-            clientKey: clientKey,
-            serverKey: serverKey
-        };
-
-        return result;
-    };
-    responses[2] = function (mech, cred) {
-        // TODO: Signal errors 
-        return '';
-    };
-
-    /**
-     * Create a SHA-1 HMAC.
-     *
-     * @param {String} key
-     * @param {String} msg
-     * @api private
-     */
-    function HMAC(key, msg) {
-        return crypto.createHmac('sha1', key).update(msg).digest('binary');
-    }
-
-    /**
-     * Iteratively create an HMAC, with a salt.
-     *
-     * @param {String} text
-     * @param {String} salt
-     * @param {Number} iterations
-     * @api private
-     */
-    function Hi(text, salt, iterations) {
-        var ui1 = HMAC(text, salt + '\0\0\0\1');
-        var ui = ui1;
-        for (var i = 0; i < iterations - 1; i++) {
-            ui1 = HMAC(text, ui1);
-            ui = XOR(ui, ui1);
-        }
-        return ui;
-    }
-
-    /**
-     * Create a SHA-1 hash.
-     *
-     * @param {String} text
-     * @api private
-     */
-    function H(text) {
-        return crypto.createHash('sha1').update(text).digest('binary');
-    }
-
-    /**
-     * String XOR
-     *
-     * @param {String} a
-     * @param {String} b
-     * @api private
-     */
-    function XOR(a, b) {
-        a = new Buffer(a, 'binary');
-        b = new Buffer(b, 'binary');
-
-        var len = Math.min(a.length, b.length);
-        result = [];
-        for (var i = 0; i < len; i++) {
-            result.push(a[i] ^ b[i]);
-        }
-        result = new Buffer(result, 'binary');
-        return result.toString('binary');
-    }
-
-    /**
-     * Escape special characters in username values.
-     *
-     * @param {String} name
-     * @api private
-     */
-    function saslname(name) {
-        var escaped = [];
-        var curr = '';
-        for (var i = 0; i < name.length; i++) {
-            curr = name[i];
-            if (curr === ',') {
-                escaped.push('=2C');
-            } else if (curr === '=') {
-                escaped.push('=3D');
-            } else {
-                escaped.push(curr);
-            }
-        }
-        return escaped.join('');
-    }
-
-    /**
-     * Parse challenge.
-     *
-     * @api private
-     */
-    function parse(chal) {
-        var dtives = {};
-        var tokens = chal.split(/,(?=(?:[^"]|"[^"]*")*$)/);
-        for (var i = 0, len = tokens.length; i < len; i++) {
-            var dtiv = /(\w+)=["]?([^"]+)["]?$/.exec(tokens[i]);
-            if (dtiv) {
-                dtives[dtiv[1]] = dtiv[2];
-            }
-        }
-        return dtives;
-    }
-  
- 
-    /**
-    * Return a unique nonce with the given `len`.
-    *
-    *     genNonce(10)();
-    *     // => "FDaS435D2z"
-    *
-    * @param {Number} len
-    * @return {Function}
-    * @api private
-    */
-    function genNonce(len) {
-        var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charlen = chars.length;
-
-        return function() {
-            var buf = [];
-            for (var i = 0; i < len; ++i) {
-                buf.push(chars[Math.random() * charlen | 0]);
-            }
-            return buf.join('');
-        }
-    }
-
-    exports = module.exports = Mechanism;
-}));
-
-},{"buffer":146,"crypto":160}],205:[function(_dereq_,module,exports){
-arguments[4][197][0].apply(exports,arguments)
-},{"./lib/mechanism":204}],206:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports, module);
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports', 'module'], factory);
-  }
-}(this, function(exports, module) {
-  
-  /**
-   * `Factory` constructor.
-   *
-   * @api public
-   */
-  function Factory() {
-    this._mechs = [];
-  }
-  
-  /**
-   * Utilize the given `mech` with optional `name`, overridding the mechanism's
-   * default name.
-   *
-   * Examples:
-   *
-   *     factory.use(FooMechanism);
-   *
-   *     factory.use('XFOO', FooMechanism);
-   *
-   * @param {String|Mechanism} name
-   * @param {Mechanism} mech
-   * @return {Factory} for chaining
-   * @api public
-   */
-  Factory.prototype.use = function(name, mech) {
-    if (!mech) {
-      mech = name;
-      name = mech.prototype.name;
-    }
-    this._mechs.push({ name: name, mech: mech });
-    return this;
-  };
-  
-  /**
-   * Create a new mechanism from supported list of `mechs`.
-   *
-   * If no mechanisms are supported, returns `null`.
-   *
-   * Examples:
-   *
-   *     var mech = factory.create(['FOO', 'BAR']);
-   *
-   * @param {Array} mechs
-   * @return {Mechanism}
-   * @api public
-   */
-  Factory.prototype.create = function(mechs) {
-    for (var i = 0, len = this._mechs.length; i < len; i++) {
-      for (var j = 0, jlen = mechs.length; j < jlen; j++) {
-        var entry = this._mechs[i];
-        if (entry.name == mechs[j]) {
-          return new entry.mech();
-        }
-      }
-    }
-    return null;
-  };
-
-  exports = module.exports = Factory;
-  
-}));
-
-},{}],207:[function(_dereq_,module,exports){
-(function(root, factory) {
-  if (typeof exports === 'object') {
-    // CommonJS
-    factory(exports,
-            module,
-            _dereq_('./lib/factory'));
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['exports',
-            'module',
-            './lib/factory'], factory);
-  }
-}(this, function(exports, module, Factory) {
-  
-  exports = module.exports = Factory;
-  exports.Factory = Factory;
-  
-}));
-
-},{"./lib/factory":206}],208:[function(_dereq_,module,exports){
-module.exports=_dereq_(194)
-},{}],209:[function(_dereq_,module,exports){
+},{}],219:[function(_dereq_,module,exports){
 (function (global){
 /*! http://mths.be/utf8js v2.0.0 by @mathias */
 ;(function(root) {
@@ -24234,7 +25368,7 @@ module.exports=_dereq_(194)
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],210:[function(_dereq_,module,exports){
+},{}],220:[function(_dereq_,module,exports){
 /*
 WildEmitter.js is a slim little event emitter by @henrikjoreteg largely based 
 on @visionmedia's Emitter from UI Kit.
